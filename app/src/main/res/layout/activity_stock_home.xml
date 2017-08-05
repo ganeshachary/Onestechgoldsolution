@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.onestechsolution.onestechgoldsolution.Activity.StockHomeActivity">
+
+    <Button
+        style="@style/ButtonWithHeight0dp"
+        android:drawableLeft="@drawable/ic_trolley"
+        android:onClick="openEnterStockDetailsActivity"
+        android:text="add stock"/>
+
+    <Button
+        style="@style/ButtonWithHeight0dp"
+        android:background="@drawable/blue_button"
+        android:drawableLeft="@drawable/ic_sale_trolley"
+        android:onClick="openEnterSaleDetailsActivity"
+        android:text="Sale"/>
+
+
+</LinearLayout>

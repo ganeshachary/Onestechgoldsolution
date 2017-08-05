@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.onestechsolution.onestechgoldsolution.Activity.ReportsActivity">
+    
+    <Button
+        android:id="@+id/btn_StockReport_ReportsActivity"
+        style="@style/ButtonWithHeight0dp"
+        android:text="Stock \nReport"
+        android:onClick="checkStockReport"
+        android:drawableLeft="@drawable/ic_stock_report"/>
+
+    <Button
+        android:id="@+id/btn_GoldInOutReport_ReportsActivity"
+        android:background="@drawable/yellow_button"
+        style="@style/ButtonWithHeight0dp"
+        android:text="Gold \nIn Out Report"
+        android:onClick="checkGoldInOutReport"
+        android:drawableRight="@drawable/ic_goldinoutreport"/>
+
+    <Button
+        android:id="@+id/btn_AttendanceReport_ReportsActivity"
+        android:background="@drawable/blue_button"
+        style="@style/ButtonWithHeight0dp"
+        android:text="Attendance Report"
+        android:onClick="checkAttendanceReport"
+        android:drawableLeft="@drawable/ic_attendance_report"/>
+
+    <Button
+        android:id="@+id/btn_LoanReport_ReportsActivity"
+
+        style="@style/ButtonWithHeight0dp"
+        android:text="Loan Report"
+        android:onClick="checkLoanReport"
+        android:drawableRight="@drawable/ic_loan_report"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_WorkerId_GoldInOutReportList"
+        android:layout_weight="2"
+        style="@style/TextViewInListView"
+        android:hint="Worker9898989898@gbv"
+        android:textColor="@color/darker_blue"
+        android:textColorHint="@color/darker_blue"
+         />
+
+    <TextView
+        android:id="@+id/tv_GoldOut_GoldInOutReportList"
+       style="@style/TextViewInListView"
+        android:hint="Gold Out"/>
+
+    <TextView
+        android:id="@+id/tv_GoldIn_GoldInOutReportList"
+        android:hint="Gold In"
+        style="@style/TextViewInListView"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+    <TextView
+        android:id="@+id/tv_GoldBalance_GoldInOutReportList"
+        style="@style/TextViewInListView"
+        android:hint="Balance"
+        android:textColorHint="@color/colorAccent"
+        android:textColor="@color/colorAccent"
+       />
+</LinearLayout>

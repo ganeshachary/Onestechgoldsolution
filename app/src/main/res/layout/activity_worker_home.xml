@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.onestechsolution.onestechgoldsolution.Activity.WorkerHomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+           style="@style/ButtonWithHeight0dp"
+            android:drawableLeft="@drawable/ic_worker"
+            android:onClick="openAddWorkerActivity"
+            android:text="Add Worker"
+            />
+
+        <Button
+            style="@style/ButtonWithHeight0dp"
+            android:background="@drawable/yellow_button"
+            android:drawableLeft="@drawable/ic_workers"
+            android:onClick="openExistingWorkerActivity"
+            android:text="search workers"
+            />
+
+        <Button
+            android:id="@+id/btn_OpenAttendance_WorkerActivity"
+            style="@style/ButtonWithHeight0dp"
+            android:background="@drawable/blue_button"
+            android:drawableLeft="@drawable/ic_attendance"
+            android:onClick="openAttendanceActivity"
+            android:text="Attendance"/>
+
+        <Button
+            android:id="@+id/btn_GoldOut_WorkerActivity"
+            style="@style/ButtonWithHeight0dp"
+            android:background="@drawable/green_button"
+            android:drawableLeft="@drawable/ic_goldout_bars"
+            android:onClick="openGoldOutActivity"
+            android:text="Gold Out" />
+
+        <Button
+            style="@style/ButtonWithHeight0dp"
+            android:background="@drawable/blue_button"
+            android:drawableLeft="@drawable/ic_gold_bar"
+            android:onClick="openSearchGoldInOutActivity"
+            android:text="Search Gold In/Out"/>
+
+    </LinearLayout>
+
+
+</ScrollView>

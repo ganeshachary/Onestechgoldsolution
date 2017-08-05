@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.onestechsolution.onestechgoldsolution.Activity.AddWorkerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Headers"
+            android:text="Add Worker"
+             />
+
+        <View
+           style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Name: "/>
+
+            <EditText
+                android:id="@+id/et_Name_AddWorkerActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="textCapWords"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_WorkerPhoto_AddWorkerActivity"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:onClick="captureImage"
+                android:src="@drawable/capture_48" />
+
+            <TextView
+                style="@style/TextViewHeight0dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Capture workers photo"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="PAN: "/>
+
+            <EditText
+                android:id="@+id/et_PAN_AddWorkerActivity"
+                android:inputType="textCapCharacters"
+                style="@style/EditTextWidth0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Aadhar: "/>
+
+            <EditText
+                android:id="@+id/et_Aadhar_AddWorkerActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="textCapCharacters"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Salary: "
+                 />
+
+            <EditText
+                android:id="@+id/et_Salary_AddWorkerActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:layout_weight="1.2"
+                android:text="Joining Date"
+                />
+
+            <Button
+                android:id="@+id/btn_JoiningDate_AddWorkerActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="setJoiningDate"
+
+                android:text="Select Date"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_JoiningDate_AddWorkerActivity"
+                style="@style/TextViewWidth0dp"
+                android:gravity="center_horizontal"
+                android:hint="Date"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:layout_weight="1.2"
+                android:text="Birth Date"
+                 />
+
+            <Button
+                android:id="@+id/btn_BirthDate_AddWorkerAcitivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="setJoiningDate"
+                android:text="Select Date"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_BirthDate_AddWorkerActivity"
+                style="@style/TextViewWidth0dp"
+                android:gravity="center_horizontal"
+                android:hint="Date"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Phone Number: "
+                />
+
+            <EditText
+                android:id="@+id/et_Phone_AddWorkerActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="number"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Description: "
+                 />
+
+            <EditText
+                android:id="@+id/et_Description_AddWorkerActivity"
+                style="@style/EditTextWidth0dp"
+                android:digits="0,1,2,3,4,5,6,7,8,9,qwertzuiopasdfghjklyxcvbnm,abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,_,-,., "
+                 />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Worker Id"
+                 />
+
+            <Button
+                android:id="@+id/btn_WorkerId_AddWorkerAcitivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="getWorkerId"
+                android:text="Get id"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_WorkerId_AddWorkerActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="1.5"
+                android:gravity="center_horizontal"
+                android:hint="WorkerId"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Address: "
+                />
+
+            <EditText
+                android:id="@+id/et_Address_AddWorkerActivity"
+                style="@style/EditTextWidth0dp"
+                android:digits="0,1,2,3,4,5,6,7,8,9,qwertzuiopasdfghjklyxcvbnm,abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,_,-,., "
+                android:inputType="textMultiLine"/>
+
+        </LinearLayout>
+
+
+        <Button
+            style="@style/Button"
+            android:onClick="onUpload"
+            android:text="Upload" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+

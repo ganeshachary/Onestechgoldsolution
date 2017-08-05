@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.onestechsolution.onestechgoldsolution.Activity.EnterStockDetailsActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        style="@style/Headers"
+        android:text="Enter Item Details for stock maintenance"
+        />
+
+
+    <View
+        style="@style/Horizontal_Ruler" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextViewWidth0dp"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/tv_Date_EnterStockDetailsActivity"
+            style="@style/TextViewWidth0dp"
+            android:hint="@string/missing"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextViewWidth0dp"
+            android:text="Type"
+            />
+
+        <Spinner
+            android:id="@+id/spnr_Type_EnterStockDetailsActivity"
+           style="@style/SpinnerWithWidth0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextViewWidth0dp"
+            android:text="Gross Weight"
+            />
+
+        <EditText
+            android:id="@+id/et_GrossWeight_EnterStockDetailsActivity"
+            style="@style/EditTextWidth0dp"
+            android:inputType="numberDecimal"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextViewWidth0dp"
+            android:text="Net Weight"
+             />
+
+        <EditText
+            android:id="@+id/et_NetWeight_EnterStockDetailsActivity"
+            style="@style/EditTextWidth0dp"
+            android:inputType="numberDecimal"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextViewWidth0dp"
+            android:text="SKU" />
+
+        <TextView
+            android:id="@+id/tv_SKU_EnterStockDetailsActivity"
+            style="@style/TextViewWidth0dp"
+            android:hint="@string/missing"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextViewWidth0dp"
+            android:text="Size"
+             />
+
+        <EditText
+            android:id="@+id/et_Size_EnterStockDetailsActivity"
+            style="@style/EditTextWidth0dp"
+            android:inputType="numberDecimal"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextViewWidth0dp"
+            android:text="No. of Stones" />
+
+        <EditText
+            android:id="@+id/et_NoOfStones_EnterStockDetailsActivity"
+            android:inputType="number"
+            style="@style/EditTextWidth0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextViewWidth0dp"
+            android:text="Stone Weight" />
+
+        <EditText
+            android:id="@+id/et_StoneWeight_EnterStockDetailsActivity"
+            style="@style/EditTextWidth0dp"
+            android:inputType="numberDecimal"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextViewWidth0dp"
+            android:text="Description" />
+
+        <EditText
+            android:id="@+id/et_Description_EnterStockDetailsActivity"
+            style="@style/EditTextWidth0dp"
+            android:digits="0,1,2,3,4,5,6,7,8,9,qwertzuiopasdfghjklyxcvbnm,abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,_,-,., "
+            />
+    </LinearLayout>
+
+    <Button
+        style="@style/Button"
+        android:onClick="onUpload"
+        android:text="Upload" />
+    </LinearLayout>
+</ScrollView>

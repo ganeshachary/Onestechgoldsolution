@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.onestechsolution.onestechgoldsolution.Activity.GoldInOutReportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            style="@style/Headers"
+            android:text="Overall Gold In/Out Report" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Total Gold Out" />
+
+            <TextView
+                android:id="@+id/tv_totalGoldOut_GoldInOutReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Total Gold In" />
+
+            <TextView
+                android:id="@+id/tv_totalGoldIn_GoldInOutReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Total Balance" />
+
+            <TextView
+                android:id="@+id/tv_totalBalance_GoldInOutReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+        </LinearLayout>
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            style="@style/Headers"
+            android:text="Workerwise" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Login Id"/>
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Gold Out"/>
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Gold In"/>
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Balance"/>
+        </LinearLayout>
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/lv_GoldInOutReportList_GoldInOutReportListActivity"
+                android:layout_width="match_parent"
+                android:layout_height="410dp"
+                android:divider="@color/darker_blue"
+                android:dividerHeight="2dp"
+                android:padding="2dp"/>
+
+
+        </LinearLayout>
+
+
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/Headers"
+            android:text="Check the entry records below" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <Button
+            style="@style/Button"
+            android:text="Click here"
+            android:onClick="openGoldOutEntryActivity"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.onestechsolution.onestechgoldsolution.Activity.GoldInActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Headers"
+            android:text="Gold In"/>
+
+        <View
+            style="@style/Horizontal_Ruler"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Bill Number"/>
+
+            <TextView
+                android:id="@+id/tv_BillNo_GoldInActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Bill Book"/>
+
+            <TextView
+                android:id="@+id/tv_BillBook_GoldInActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Bill Date"/>
+
+
+            <TextView
+                android:id="@+id/tv_Date_GoldInActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/TextViewWidth0dp"
+                android:text="Delivery Date"/>
+
+
+            <TextView
+                android:id="@+id/tv_DeliveryDate_GoldInActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing"/>
+        </LinearLayout>
+
+
+
+        <View
+            style="@style/Horizontal_Ruler" />
+
+        <TextView
+            style="@style/SubHeaders"
+            android:text="Was assigned to: "
+             />
+
+        <View
+            style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Worker Id"
+                />
+
+            <TextView
+                android:id="@+id/tv_WorkerId_GoldInActivity"
+                android:text="@string/missing"
+                style="@style/FieldTextViewWidth0dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Description"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Description_GoldInActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Gold Out"
+                />
+
+            <TextView
+                android:id="@+id/tv_GoldOut_GoldInActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Gold In"
+                 />
+
+            <EditText
+                android:id="@+id/et_GoldIn_GoldInActivity"
+                style="@style/EditTextWidth0dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_GoldInDateTime_GoldInActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Gold In Date Time"/>
+
+            <TextView
+                android:id="@+id/tv_GoldInDateTime_GoldInActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_Upload_GoldInActivity"
+           style="@style/Button"
+            android:onClick="onUpload"
+            android:text="Upload" />
+
+    </LinearLayout>
+
+</ScrollView>

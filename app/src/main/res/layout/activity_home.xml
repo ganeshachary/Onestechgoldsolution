@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:padding="8dp"
+    tools:context="com.onestechsolution.onestechgoldsolution.Activity.HomeActivity">
+
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/ButtonWithHeight0dp"
+        android:background="@drawable/green_button"
+        android:drawableRight="@drawable/ic_receive_loan"
+        android:onClick="openLoanActivity"
+        android:text="Loan"/>
+
+
+    <!-- <Button
+         android:onClick="openOrderActivity"
+         android:text="Order"
+         style="@style/button"/>-->
+
+
+    <Button
+        style="@style/ButtonWithHeight0dp"
+        android:background="@drawable/yellow_button"
+        android:drawableLeft="@drawable/ic_welder"
+        android:onClick="openWorkerActivity"
+        android:text="Worker"/>
+    <!--<Button
+        android:onClick="openQRCodeActivity"
+        android:text="QR Code"
+        style="@style/button"/>-->
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/ButtonWithHeight0dp"
+        android:background="@drawable/blue_button"
+        android:drawableRight="@drawable/ic_stock_trolley"
+        android:onClick="openStockSaleActivity"
+        android:text="Stock"/>
+
+    <Button
+        android:id="@+id/btn_ReportButton_HomeActivity"
+        style="@style/ButtonWithHeight0dp"
+        android:text="Reports"
+        android:drawableLeft="@drawable/ic_analytics"
+        android:onClick="openReportsActivity"/>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.onestechsolution.onestechgoldsolution.Activity.LoanReportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            style="@style/Headers"
+            android:text="Overall Loan Report" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="New Loans" />
+
+            <TextView
+                android:id="@+id/tv_NewLoan_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Closed Loans" />
+
+            <TextView
+                android:id="@+id/tv_ClosedLoan_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Customers" />
+
+            <TextView
+                android:id="@+id/tv_TotalCustomers_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+        </LinearLayout>
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            style="@style/Headers"
+            android:text="Total(Amount)" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Loan Amount" />
+
+            <TextView
+                android:id="@+id/tv_LoanAmount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0.000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Principle Paid " />
+
+            <TextView
+                android:id="@+id/tv_PrinciplePaid_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0.000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Principle Pending " />
+
+            <TextView
+                android:id="@+id/tv_PrinciplePending_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0.000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Penalty Paid " />
+
+            <TextView
+                android:id="@+id/tv_PenaltyPaid_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0.000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="EMI Paid " />
+
+            <TextView
+                android:id="@+id/tv_EMIPaid_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0.000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="EMI Pending " />
+
+            <TextView
+                android:id="@+id/tv_EMIPending_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0.000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="EMIs Pending >= 3 " />
+
+            <TextView
+                android:id="@+id/tv_EMIPending3_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="EMIs Pending >= 6 " />
+
+            <TextView
+                android:id="@+id/tv_EMIPending6_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Discount" />
+
+            <TextView
+                android:id="@+id/tv_Discount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0.000" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/Horizontal_Ruler"/>
+
+        <TextView
+            style="@style/Headers"
+            android:text="Total(Items)"/>
+
+        <View
+            style="@style/Horizontal_Ruler"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Gross Weight " />
+
+            <TextView
+                android:id="@+id/tv_GrossWeight_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0.000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Net Weight" />
+
+            <TextView
+                android:id="@+id/tv_NetWeight_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0.000" />
+
+        </LinearLayout>
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            style="@style/Headers"
+            android:text="Total of Items" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Ring"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_RingCount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Chain"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_ChainCount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Stud"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_StudCount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Necklace"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_NecklaceCount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Earrings"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_EarringsCount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Bracelet"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_BraceletCount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Kalamani"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_KalamaniCount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Earchain"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_EarchainCount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Dollar"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_DollarCount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Haar"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_HaarCount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Bangles"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_BanglesCount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Others"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_OthersCount_LoanReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+        </LinearLayout>
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/Headers"
+            android:text="Check the entry records below" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <Button
+            style="@style/Button"
+            android:onClick="openLoanEntryReport"
+            android:text="Click here" />
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.onestechsolution.onestechgoldsolution.Activity.StockReportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            style="@style/Headers"
+            android:text="Overall Stock Report" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Items Instock" />
+
+            <TextView
+                android:id="@+id/tv_Instock_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Items Sold" />
+
+            <TextView
+                android:id="@+id/tv_Sold_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+        </LinearLayout>
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            style="@style/Headers"
+            android:text="Total(Instock) " />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Gross Weight " />
+
+            <TextView
+                android:id="@+id/tv_GrossWeight_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0.000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Net Weight" />
+
+            <TextView
+                android:id="@+id/tv_NetWeight_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0.000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Stone Weight" />
+
+            <TextView
+                android:id="@+id/tv_StoneWeight_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0.000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="No of Stones" />
+
+            <TextView
+                android:id="@+id/tv_NoOfStones_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+        </LinearLayout>
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            style="@style/Headers"
+            android:text="Types of Items(Instock)" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Ring"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_RingCount_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Chain"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_ChainCount_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Stud"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_StudCount_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Necklace"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_NecklaceCount_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Earrings"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_EarringsCount_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Bracelet"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_BraceletCount_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Kalamani"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_KalamaniCount_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Earchain"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_EarchainCount_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Dollar"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_DollarCount_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Haar"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_HaarCount_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Bangles"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_BanglesCount_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Others"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_OthersCount_StockReportActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="0" />
+
+        </LinearLayout>
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/Headers"
+            android:text="Check the entry records below" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <Button
+            style="@style/Button"
+            android:text="Click here"
+            android:onClick="openStockEntryReport"/>
+
+
+    </LinearLayout>
+</ScrollView>

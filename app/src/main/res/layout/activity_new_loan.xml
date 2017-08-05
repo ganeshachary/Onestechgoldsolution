@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.onestechsolution.onestechgoldsolution.Activity.NewLoanActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <View
+            style="@style/Horizontal_Ruler" />
+
+        <TextView
+            android:text="Loan Details"
+            style="@style/Headers" />
+
+        <View
+            style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Loan Id:"
+                />
+
+            <TextView
+                android:id="@+id/tv_Loanid_NewLoanActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="Missing.."
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Name"
+                 />
+
+            <EditText
+                android:id="@+id/et_Name_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:inputType="textCapWords" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_CustomerPhoto_NewLoanActivity"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:onClick="captureImage"
+                android:src="@drawable/capture_48" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="Capture customers photo"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Date "
+                 />
+
+            <TextView
+                android:id="@+id/tv_Date_NewLoanActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:hint="Date not found"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Contact No"
+                 />
+
+            <EditText
+                android:id="@+id/et_Contact_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Amount"
+                 />
+
+            <EditText
+                android:id="@+id/et_Amount_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Address"/>
+
+            <EditText
+                android:id="@+id/et_Address_NewLoanActivity"
+               style="@style/EditTextWidth0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="PAN"
+                />
+
+            <EditText
+                android:id="@+id/et_PAN_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "
+
+                android:inputType="textCapCharacters" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Aadhar"
+                 />
+
+            <EditText
+                android:id="@+id/et_Aadhar_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "
+                android:inputType="textCapCharacters" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="%"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spnr_Percentage_NewLoanActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000000" />
+
+        <TextView
+            style="@style/SubHeaders"
+            android:text="Item Description"
+            android:textSize="25sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Description"
+                 />
+
+            <EditText
+                android:id="@+id/et_Description_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:digits="0,1,2,3,4,5,6,7,8,9,qwertzuiopasdfghjklyxcvbnm,abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,_,-,., "
+
+                android:inputType="textCapSentences" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:layout_weight="2"
+                android:text="No. of types of Items"
+                 />
+
+            <Spinner
+                android:id="@+id/spnr_ItemTypeCount_NewLoanActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+               style="@style/TextViewWidth0dp"
+                android:text="Gross Weight"
+                 />
+
+            <EditText
+                android:id="@+id/et_GrossWeight_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Net Weight"
+                 />
+
+            <EditText
+                android:id="@+id/et_NetWeight_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Current Gold Rate"
+                 />
+
+            <EditText
+                android:id="@+id/et_CurrentGoldRate_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Enter Loan Rate"
+                 />
+
+            <EditText
+                android:id="@+id/et_LoanRate_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="calculateLoanValue"
+                android:text="Get Loan value" />
+
+            <TextView
+                android:id="@+id/tv_LoanRateValue_NewLoanActivity"
+                android:gravity="center_horizontal"
+                style="@style/TextViewWidth0dp"
+                android:hint="0"
+                 />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="italic"
+                android:text="Item type"
+                 />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:textStyle="italic"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Item count"
+                 />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:textStyle="italic"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Weight"
+                />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:textStyle="italic"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Image"
+                 />
+
+        </LinearLayout>
+
+        <View
+            style="@style/Horizontal_Ruler" />
+
+        <!--      Item 1           -->
+
+        <LinearLayout
+            android:id="@+id/ll_Item1_NewLoanActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spnr_item1_itemlist_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+            <Spinner
+                android:id="@+id/spnr_item1_type_count_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"/>
+
+            <EditText
+                android:id="@+id/et_Item1Weight_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal" />
+
+            <ImageView
+                android:id="@+id/iv_Item1_NewLoanActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="captureImage"
+                android:src="@drawable/capture_48" />
+
+        </LinearLayout>
+
+        <!--      Item 2           -->
+
+        <LinearLayout
+            android:id="@+id/ll_Item2_NewLoanActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Spinner
+                android:id="@+id/spnr_item2_itemlist_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/spnr_item2_type_count_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/et_Item2Weight_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal" />
+
+            <ImageView
+                android:id="@+id/iv_Item2_NewLoanActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="captureImage"
+                android:src="@drawable/capture_48" />
+
+        </LinearLayout>
+
+        <!--      Item 3           -->
+
+        <LinearLayout
+            android:id="@+id/ll_Item3_NewLoanActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+
+            <Spinner
+                android:id="@+id/spnr_item3_itemlist_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/spnr_item3_type_count_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/et_Item3Weight_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal" />
+
+            <ImageView
+                android:id="@+id/iv_Item3_NewLoanActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="captureImage"
+                android:src="@drawable/capture_48" />
+
+        </LinearLayout>
+
+        <!--      Item 4           -->
+
+        <LinearLayout
+            android:id="@+id/ll_Item4_NewLoanActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+
+            <Spinner
+                android:id="@+id/spnr_item4_itemlist_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/spnr_item4_type_count_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/et_Item4Weight_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal" />
+
+            <ImageView
+                android:id="@+id/iv_Item4_NewLoanActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="captureImage"
+                android:src="@drawable/capture_48" />
+
+        </LinearLayout>
+
+        <!--      Item 5           -->
+
+        <LinearLayout
+            android:id="@+id/ll_Item5_NewLoanActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+
+            <Spinner
+                android:id="@+id/spnr_item5_itemlist_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/spnr_item5_type_count_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/et_Item5Weight_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal" />
+
+            <ImageView
+                android:id="@+id/iv_Item5_NewLoanActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="captureImage"
+                android:src="@drawable/capture_48" />
+
+        </LinearLayout>
+
+        <!--      Item 6           -->
+
+        <LinearLayout
+            android:id="@+id/ll_Item6_NewLoanActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+
+            <Spinner
+                android:id="@+id/spnr_item6_itemlist_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/spnr_item6_type_count_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/et_Item6Weight_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal" />
+
+            <ImageView
+                android:id="@+id/iv_Item6_NewLoanActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="captureImage"
+                android:src="@drawable/capture_48" />
+
+        </LinearLayout>
+
+        <!--      Item 7           -->
+
+        <LinearLayout
+            android:id="@+id/ll_Item7_NewLoanActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+
+            <Spinner
+                android:id="@+id/spnr_item7_itemlist_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/spnr_item7_type_count_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/et_Item7Weight_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal" />
+
+            <ImageView
+                android:id="@+id/iv_Item7_NewLoanActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="captureImage"
+                android:src="@drawable/capture_48" />
+
+        </LinearLayout>
+
+        <!--      Item 8           -->
+
+        <LinearLayout
+            android:id="@+id/ll_Item8_NewLoanActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <Spinner
+                android:id="@+id/spnr_item8_itemlist_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/spnr_item8_type_count_loan_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/et_Item8Weight_NewLoanActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal" />
+
+            <ImageView
+                android:id="@+id/iv_Item8_NewLoanActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="captureImage"
+                android:src="@drawable/capture_48" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_Upload_NewLoanActivity"
+                style="@style/Button"
+                android:layout_weight="1"
+                android:onClick="onUpload"
+                android:text="Upload"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

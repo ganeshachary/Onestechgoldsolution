@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.onestechsolution.onestechgoldsolution.Activity.LoanListDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            style="@style/Headers"
+            android:text="Loan Details" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_date_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="Date missing" />
+
+            <TextView
+                android:id="@+id/tv_time_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="Time missing" />
+        </LinearLayout>
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_CustomerPhoto_LoanListDetailsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:src="@drawable/error" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_CustomerName_LoanListDetailsActivity"
+                    style="@style/TextView"
+                    android:text="Customer Name missing" />
+
+                <TextView
+                    android:id="@+id/tv_LoanId_LoanListDetailsActivity"
+                    style="@style/TextView"
+                    android:text="Loan id missing" />
+
+                <TextView
+                    android:id="@+id/tv_Contact_LoanListDetailsActivity"
+                    style="@style/TextView"
+                    android:text="Contact number missing" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Loan amount: " />
+
+            <TextView
+                android:id="@+id/tv_LoanAmount_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Description: " />
+
+            <TextView
+                android:id="@+id/tv_Description_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Percentage: " />
+
+            <TextView
+                android:id="@+id/tv_Percentage_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Gross Weight: " />
+
+            <TextView
+                android:id="@+id/tv_GrossWeight_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Net Weight: " />
+
+            <TextView
+                android:id="@+id/tv_NetWeight_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_TopPartyDetails_LoanListDetails"
+            style="@style/Horizontal_Ruler"
+            android:visibility="gone"/>
+
+        <TextView
+            style="@style/SubHeaders"
+            android:text="Party details" />
+
+        <View android:id="@+id/view_BottomPartyDetails_LoanListDetails"
+            style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Party Code" />
+
+            <TextView
+                android:id="@+id/tv_PartyCode_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Reference Number :  " />
+
+            <TextView
+                android:id="@+id/tv_ReferenceNumber_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing" />
+        </LinearLayout>
+
+        <View android:id="@+id/view_TopPenalty_LoanListDetailsActivity"
+            android:visibility="gone"
+            style="@style/Horizontal_Ruler" />
+
+        <TextView
+            android:id="@+id/tv_PenaltyHeading_LoanListDetailsActivity"
+            style="@style/SubHeaders"
+            android:visibility="gone"
+            android:text="Penalty details" />
+
+        <View
+            android:id="@+id/view_BottomPenalty_LoanListDetailsActivity"
+            style="@style/Horizontal_Ruler"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_PenaltyPayable_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Penalty:" />
+
+            <TextView
+                android:id="@+id/tv_Penalty_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_PenaltyPercentage_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Percentage :" />
+
+            <TextView
+                android:id="@+id/tv_PenaltyPercentage_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_PenaltyAmount_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Penalty Amount :  " />
+
+            <EditText
+                android:id="@+id/et_PenaltyAmount_LoanListDetailsActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal"
+                 />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_TopEMIDetails_LoanListDetailsActivity"
+            style="@style/Horizontal_Ruler"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_EMIDetailsHeading_LoanListDetailsActivity"
+            style="@style/SubHeaders"
+            android:text="EMI details"
+            android:visibility="gone"/>
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/view_BottomEMIDetails_LoanListDetailsActivity"
+            style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:id="@+id/ll_EMIPayable_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="EMI to pay:" />
+
+            <TextView
+                android:id="@+id/tv_EmiAmountPayable_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_EMIMonthsPending_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/TextViewWidth0dp"
+                android:text="EMI number of months pending :" />
+
+            <TextView
+                android:id="@+id/tv_EmiNumberOfMonthsPending_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_EMIMonthsPayingFor_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/test"
+                style="@style/TextViewWidth0dp"
+                android:text="EMI number of months you are paying for :" />
+
+            <Spinner
+                android:id="@+id/spnr_emiNoOfMonthsPaid_LoanListDetailsActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_EMIAmount_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Emi Amount :  " />
+
+            <EditText
+                android:id="@+id/et_EmiAmount_LoanListDetailsActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal"
+                 />
+
+        </LinearLayout>
+
+
+        <View style="@style/Horizontal_Ruler" />
+
+
+        <TextView
+            style="@style/SubHeaders"
+            android:text="Principal Amount" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Principle payable:" />
+
+            <TextView
+                android:id="@+id/tv_PrincipleAmountPayable_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/missing" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Principle amount:" />
+
+            <EditText
+                android:id="@+id/et_PrincipleAmountPaid_LoanListDetailsActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal"
+                 />
+
+        </LinearLayout>
+
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            style="@style/SubHeaders"
+            android:text="Item details" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:layout_weight="0.4"
+                android:text="No."
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="italic" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:layout_weight="1.1"
+                android:text="Particulars"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="21sp"
+                android:textStyle="italic" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Count"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="21sp"
+                android:textStyle="italic" />
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Weight"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="21sp"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+
+        <!--Item 1 -->
+
+        <LinearLayout
+            android:id="@+id/ll_Item1_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="0.3"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/tv_Item1Type_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="1.1"
+                android:text="@string/no_record" />
+
+            <TextView
+                android:id="@+id/tv_Item1Weight_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record" />
+
+            <TextView
+                android:id="@+id/tv_Item1Count_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record" />
+
+
+        </LinearLayout>
+
+        <!--Item 2-->
+
+        <LinearLayout
+            android:id="@+id/ll_Item2_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="0.3"
+                android:text="2"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item2Type_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="1.1"
+                android:text="@string/no_record"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item2Weight_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item2Count_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                 />
+
+        </LinearLayout>
+
+        <!--Item 3-->
+
+        <LinearLayout
+            android:id="@+id/ll_Item3_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="0.3"
+                android:text="3"
+                />
+
+            <TextView
+                android:id="@+id/tv_Item3Type_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="1.1"
+                android:text="@string/no_record"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item3Weight_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item3Count_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                 />
+
+        </LinearLayout>
+
+        <!--Item 4-->
+
+        <LinearLayout
+            android:id="@+id/ll_Item4_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="0.3"
+                android:text="4"
+                />
+
+            <TextView
+                android:id="@+id/tv_Item4Type_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="1.1"
+                android:text="@string/no_record"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item4Weight_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item4Count_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                 />
+
+        </LinearLayout>
+
+        <!--Item 5-->
+
+        <LinearLayout
+            android:id="@+id/ll_Item5_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="0.3"
+                android:text="5"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item5Type_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="1.1"
+                android:text="@string/no_record"
+                />
+
+            <TextView
+                android:id="@+id/tv_Item5Weight_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                />
+
+            <TextView
+                android:id="@+id/tv_Item5Count_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                />
+
+        </LinearLayout>
+
+        <!--Item 6-->
+
+        <LinearLayout
+            android:id="@+id/ll_Item6_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="0.3"
+                android:text="6"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item6Type_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="1.1"
+                android:text="@string/no_record"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item6Weight_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item6Count_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                 />
+
+        </LinearLayout>
+
+        <!--Item 7-->
+
+        <LinearLayout
+            android:id="@+id/ll_Item7_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="0.3"
+                android:text="7"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item7Type_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="1.1"
+                android:text="@string/no_record"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item7Weight_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                />
+
+            <TextView
+                android:id="@+id/tv_Item7Count_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                 />
+
+        </LinearLayout>
+
+        <!--Item 8-->
+
+        <LinearLayout
+            android:id="@+id/ll_Item8_LoanListDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="0.3"
+                android:text="8"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item8Type_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:layout_weight="1.1"
+                android:text="@string/no_record"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item8Weight_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Item8Count_LoanListDetailsActivity"
+                style="@style/FieldTextViewWidth0dp"
+                android:text="@string/no_record"
+                 />
+
+        </LinearLayout>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_button"
+            android:onClick="onUpload"
+            android:text="Upload"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

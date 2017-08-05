@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.onestechsolution.onestechgoldsolution">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.LoanHomeActivity"
+            android:parentActivityName=".Activity.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NewLoanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.LoanListActivity"
+            android:parentActivityName=".Activity.LoanHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.LoanListDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.WorkerHomeActivity"
+            android:parentActivityName=".Activity.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddWorkerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AttendanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.WorkerListActivity"
+            android:parentActivityName=".Activity.WorkerHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GoldOutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GoldInOutListActivity"
+            android:parentActivityName=".Activity.WorkerHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.EnterStockDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.EnterSaleDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.StockHomeActivity"
+            android:parentActivityName=".Activity.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GoldInActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activity.ReportsActivity" />
+        <activity android:name=".Activity.StockReportActivity" />
+        <activity android:name=".Activity.GoldInOutReportActivity" />
+        <activity android:name=".Activity.AttendanceReportActivity" />
+        <activity android:name=".Activity.StockEntryReportActivity" />
+        <activity android:name=".Activity.LoanReportActivity" />
+        <activity android:name=".Activity.LoanEntryReportActivity" />
+        <activity android:name=".Activity.GoldInOutEntryReportActivity" />
+        <activity android:name=".Activity.AttendanceEntryReportActivity"></activity>
+    </application>
+
+</manifest>

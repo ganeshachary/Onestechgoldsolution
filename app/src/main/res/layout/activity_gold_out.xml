@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.onestechsolution.onestechgoldsolution.Activity.GoldOutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Headers"
+            android:text="Gold Out"
+             />
+
+        <View
+            style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Bill Number" />
+
+            <EditText
+                android:id="@+id/et_BillNo_GoldOutActivity"
+                style="@style/EditTextWidth0dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/TextViewWidth0dp"
+                android:text="Bill Book" />
+
+            <EditText
+                android:id="@+id/et_BillBook_GoldOutActivity"
+                style="@style/EditTextWidth0dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:layout_weight="1.5"
+                android:text="Date" />
+
+            <Button
+                android:id="@+id/btn_Date_GoldOutActivity"
+                style="@style/Button10sp"
+                android:onClick="setDate"
+                android:text="Select date"
+                 />
+
+            <TextView
+                android:id="@+id/tv_Date_GoldOutActivity"
+                style="@style/TextViewWidth0dp"
+                android:gravity="center_horizontal"
+                android:hint="Date"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:layout_weight="1.5"
+                android:text="Delivery Date"
+                 />
+
+            <Button
+                android:id="@+id/btn_DeliveryDate_GoldOutActivity"
+                style="@style/Button10sp"
+                android:onClick="setDate"
+                android:text="Select date"
+                />
+
+            <TextView
+                android:id="@+id/tv_DeliveryDate_GoldOutActivity"
+                style="@style/TextViewWidth0dp"
+                android:gravity="center_horizontal"
+                android:hint="Date"
+                />
+        </LinearLayout>
+
+        <View
+            style="@style/Horizontal_Ruler" />
+
+        <TextView
+            style="@style/SubHeaders"
+            android:text="Assign To"
+             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Worker Id"
+                 />
+
+            <Spinner
+                android:id="@+id/spnr_WorkerLoginIds_GoldOutActivity"
+                style="@style/SpinnerWithWidth0dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Description"
+                />
+
+            <EditText
+                android:id="@+id/et_Description_GoldOutActivity"
+                style="@style/EditTextWidth0dp"
+                android:digits="0,1,2,3,4,5,6,7,8,9,qwertzuiopasdfghjklyxcvbnm,abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,_,-,., "
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:text="Total Gold Out"
+               />
+
+            <EditText
+                android:id="@+id/et_GoldOut_GoldOutActivity"
+                style="@style/EditTextWidth0dp"
+                android:inputType="numberDecimal"
+                />
+        </LinearLayout>
+
+        <Button
+            style="@style/Button"
+            android:onClick="onUpload"
+
+            android:text="Upload" />
+
+    </LinearLayout>
+
+</ScrollView>

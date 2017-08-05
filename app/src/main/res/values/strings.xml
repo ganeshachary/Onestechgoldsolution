@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">G-Audit</string>
+    <string name="type_here">Type here...</string>
+    <string name="search_here">Search here...</string>
+    <string name="missing">Missing..</string>
+    <string name="no_record">No record..</string>
+
+
+    <string-array name="item_type_count">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="item_count">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="no_of_stones">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="emi_months_paid">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+    </string-array>
+
+    <string-array name="loan_percentage">
+        <item>1</item>
+        <item>1.5</item>
+        <item>1.75</item>
+        <item>2</item>
+        <item>2.5</item>
+        <item>2.75</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="item_type">
+        <item>Ring</item>
+        <item>Chain</item>
+        <item>Stud</item>
+        <item>Necklace</item>
+        <item>Earrings</item>
+        <item>Bracelet</item>
+        <item>Kalamani</item>
+        <item>Earchain</item>
+        <item>Dollar</item>
+        <item>Haar</item>
+        <item>Bangles</item>
+        <item>Others</item>
+
+    </string-array>
+
+    <string-array name="attendance_status">
+        <item>Present</item>
+        <item>Absent</item>
+    </string-array>
+
+</resources>
