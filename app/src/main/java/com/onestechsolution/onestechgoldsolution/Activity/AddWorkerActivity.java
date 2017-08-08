@@ -2,7 +2,6 @@ package com.onestechsolution.onestechgoldsolution.Activity;
 
 import android.Manifest;
 import android.app.DatePickerDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -38,6 +37,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class AddWorkerActivity extends AppCompatActivity {
+    //just a comment
     private static final String TAG = "AddWorkerActivity";
     private static final int PERMISSION_CALLBACK_CONSTANT = 100;
     private static final int REQUEST_PERMISSION_SETTING = 101;
