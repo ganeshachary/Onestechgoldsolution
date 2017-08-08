@@ -37,7 +37,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class AddWorkerActivity extends AppCompatActivity {
-    //just a comment
+    //just a comment for committing
     private static final String TAG = "AddWorkerActivity";
     private static final int PERMISSION_CALLBACK_CONSTANT = 100;
     private static final int REQUEST_PERMISSION_SETTING = 101;
