@@ -105,6 +105,7 @@ public class AttendanceReportActivity extends AppCompatActivity implements Fetch
         tvPresent = (TextView) findViewById(R.id.tv_Present_AttendanceReportActivity);
         tvAbsent = (TextView) findViewById(R.id.tv_Absent_AttendanceReportActivity);
         setSpinnerData();
+        ///
     }
 
     private void setSpinnerData() {
