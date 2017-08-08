@@ -7,9 +7,11 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -24,11 +26,12 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class AttendanceActivity extends AppCompatActivity {
+public class AttendanceActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private static final String TAG = "AttendanceActivity";
     Button btnTimeAttendanceActivity;
     Spinner spinner;
     Attendance attendance;
+
     ArrayList<String> workerLoginIds;
     TextView tvTimeAttendanceActivity;
     String username, password;
@@ -36,21 +39,29 @@ public class AttendanceActivity extends AppCompatActivity {
     int spnrAttendance = R.id.spnr_AttendanceStatus_AttendanceActivity;
     int spnrWorkerLoginIds = R.id.spnr_WorkerLoginIds_AttendanceActivity;
 
-
     TimePickerDialog.OnTimeSetListener time = new TimePickerDialog.OnTimeSetListener() {
 
         @Override
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
             calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
             calendar.set(Calendar.MINUTE, minute);
+            String hour = hourOfDay + "";
+            String minutes = minute + "";
+            if (hourOfDay < 10) {
+                hour = "0" + hour;
+            }
+
+            if (minute < 10) {
+                minutes = "0" + minutes;
+            }
+
             String AM_PM;
             if (hourOfDay < 12) {
                 AM_PM = "AM";
             } else {
                 AM_PM = "PM";
             }
-
-            tvTimeAttendanceActivity.setText(hourOfDay + ":" + minute + " " + AM_PM);
+            tvTimeAttendanceActivity.setText(hour + ":" + minutes + " " + AM_PM);
         }
     };
 
@@ -64,8 +75,25 @@ public class AttendanceActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate: workerLoginIds: " + workerLoginIds.toString());
         btnTimeAttendanceActivity = (Button) findViewById(R.id.btn_Time_AttendanceActivity);
         tvTimeAttendanceActivity = (TextView) findViewById(R.id.tv_Time_AttendanceActivity);
+        ((Spinner) findViewById(spnrAttendance)).setOnItemSelectedListener(this);
         setSpinnerData();
         setDate();
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        Log.i(TAG, "onItemSelected: Selected Item: " + parent.getSelectedItem().toString());
+        String selectedItem = parent.getSelectedItem().toString();
+        if (selectedItem.equalsIgnoreCase("absent")) {
+            findViewById(R.id.ll_Time_AttendanceActivity).setVisibility(View.GONE);
+        } else {
+            findViewById(R.id.ll_Time_AttendanceActivity).setVisibility(View.VISIBLE);
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 
     private void setSpinnerData() {
@@ -73,8 +101,8 @@ public class AttendanceActivity extends AppCompatActivity {
         setSpinnerAdapter(spnrWorkerLoginIds, workerLoginIds);
     }
 
+    //For Attendance Status Spinner
     private void setSpinnerAdapter(int spinnerid, int arrayid) {
-
         spinner = (Spinner) findViewById(spinnerid);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -83,14 +111,16 @@ public class AttendanceActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
+
     }
 
+    //For Worker Login Id's
     public void setSpinnerAdapter(int spinnerid, ArrayList<String> list) {
         spinner = (Spinner) findViewById(spinnerid);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
         spinner.setAdapter(adapter);
-    }
 
+    }
 
     @Override
     public void onBackPressed() {
@@ -129,8 +159,6 @@ public class AttendanceActivity extends AppCompatActivity {
             Toast.makeText(this, "Workerlogin Id cannot be empty. Please contact support.", Toast.LENGTH_SHORT).show();
         } else if (date.isEmpty() || date.equals(null)) {
             Toast.makeText(this, "Date field cannot be empty. Please contact support.", Toast.LENGTH_SHORT).show();
-        }else if (timeIn.isEmpty() || timeIn.equals(null)) {
-            Toast.makeText(this, "Please select the In time", Toast.LENGTH_SHORT).show();
         } else {
 
 
@@ -162,4 +190,6 @@ public class AttendanceActivity extends AppCompatActivity {
             }
         }
     }
+
+
 }

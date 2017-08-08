@@ -1,5 +1,7 @@
 package com.onestechsolution.onestechgoldsolution.Model;
 
+import android.net.Uri;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -9,6 +11,33 @@ import org.json.JSONObject;
 
 public class Stock {
     String sku, type, date, size, noOfStones, stoneWeight, billNo, grossWeight, billDate, status, description, netWeight;
+    Uri itemPhoto;
+    String imageName;
+
+    public Uri getItemPhoto() {
+        return itemPhoto;
+    }
+
+    public void setItemPhoto(Uri itemPhoto) {
+        this.itemPhoto = itemPhoto;
+    }
+
+    public String getImageName() {
+        if(itemPhoto==null) {
+            imageName = "";
+        } else {
+            String fileUriName = "";
+            fileUriName = itemPhoto.getPath();
+            fileUriName = fileUriName.substring(fileUriName.indexOf('G'));
+            fileUriName = fileUriName.substring(fileUriName.indexOf('/') + 1);
+            imageName = fileUriName;
+        }
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
 
     public String getNetWeight() {
         return netWeight;
@@ -107,6 +136,7 @@ public class Stock {
     }
 
     public String getJSON() throws JSONException {
+
         JSONObject jsonObject = new JSONObject();
         jsonObject.accumulate("sku", sku);
         jsonObject.accumulate("gross_weight", grossWeight);
@@ -118,6 +148,7 @@ public class Stock {
         jsonObject.accumulate("itemType", type);
         jsonObject.accumulate("stoneWeight", stoneWeight);
         jsonObject.accumulate("billNo", billNo);
+        jsonObject.accumulate("imageName",getImageName());
 
         JSONObject rootObject = new JSONObject();
         rootObject.accumulate("stock", jsonObject);
