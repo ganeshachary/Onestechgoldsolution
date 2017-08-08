@@ -83,7 +83,7 @@
 
         <Button
             android:id="@+id/btn_GetReport_AttendanceReportActivity"
-           style="@style/Button"
+            style="@style/Button"
             android:onClick="getReport"
             android:text="Get report" />
 
@@ -91,7 +91,7 @@
 
         <TextView
             style="@style/Headers"
-            android:text="Total"/>
+            android:text="Total" />
 
         <View style="@style/Horizontal_Ruler" />
 
@@ -111,8 +111,8 @@
                 android:text="0" />
 
             <TextView
-                android:layout_weight="2"
                 style="@style/TextViewWidth0dp"
+                android:layout_weight="2"
                 android:text="Absent: " />
 
             <TextView
@@ -126,7 +126,7 @@
 
         <TextView
             style="@style/Headers"
-            android:text="Date wise"/>
+            android:text="Date wise" />
 
         <View style="@style/Horizontal_Ruler" />
 
@@ -136,8 +136,8 @@
 
             <TextView
                 style="@style/TextViewWidth0dp"
-                android:gravity="center"
                 android:layout_weight="1.5"
+                android:gravity="center"
                 android:text="Date"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -165,10 +165,10 @@
 
             <TextView
                 style="@style/TextViewWidth0dp"
+                android:layout_weight="1.5"
                 android:gravity="center"
                 android:text="Reason"
                 android:textSize="16sp"
-                android:layout_weight="1.5"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -181,12 +181,12 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/TextView"
                 android:id="@+id/tv_EmptyList_AttendanceReportListActivity"
-                android:text="Click on Get Report button"
+                style="@style/TextView"
                 android:padding="20sp"
-                android:textColor="@color/red"
-                />
+                android:text="Click on Get Report button"
+                android:textColor="@color/red" />
+
 
             <ListView
                 android:id="@+id/lv_AttendanceReportList_AttendanceReportListActivity"
@@ -194,9 +194,8 @@
                 android:layout_height="250dp"
                 android:divider="@color/darker_blue"
                 android:dividerHeight="2dp"
-                android:visibility="gone"
-                android:padding="2dp" />
-
+                android:padding="2dp"
+                android:visibility="gone" />
 
 
         </LinearLayout>

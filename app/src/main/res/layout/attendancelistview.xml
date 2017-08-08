@@ -1,48 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
 
     <TextView
         android:id="@+id/tv_Date_AttendanceReportList"
         style="@style/TextViewInListView"
         android:layout_weight="1.5"
-        android:textSize="14sp"
         android:hint="12/12/2017"
         android:textColor="@color/darker_blue"
         android:textColorHint="@color/darker_blue"
-        />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tv_Status_AttendanceReportList"
         style="@style/TextViewInListView"
-        android:textSize="14sp"
-        android:hint="Present"/>
+        android:hint="Present"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tv_TimeIn_AttendanceReportList"
-        android:hint="09:00 AM"
-        android:textSize="14sp"
         style="@style/TextViewInListView"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:hint="09:00 AM"
         android:textColor="@color/colorPrimaryDark"
-        />
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tv_TimeOut_AttendanceReportList"
         style="@style/TextViewInListView"
         android:layout_weight="1.5"
         android:hint="06:00 PM"
-        android:textSize="14sp"
-        android:textColorHint="@color/colorAccent"
         android:textColor="@color/colorAccent"
-        />
+        android:textColorHint="@color/colorAccent"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tv_Reason_AttendanceReportList"
         style="@style/TextViewInListView"
-        android:textSize="14sp"
-        android:hint="Came on Time"/>
+        android:hint="Came on Time"
+        android:textSize="14sp" />
+
 
 </LinearLayout>
