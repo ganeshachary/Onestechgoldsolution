@@ -31,7 +31,6 @@ public class AttendanceActivity extends AppCompatActivity implements AdapterView
     Button btnTimeAttendanceActivity;
     Spinner spinner;
     Attendance attendance;
-
     ArrayList<String> workerLoginIds;
     TextView tvTimeAttendanceActivity;
     String username, password;
