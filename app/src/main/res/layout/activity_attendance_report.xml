@@ -156,12 +156,12 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
+           <!-- <TextView
                 style="@style/TextViewWidth0dp"
                 android:gravity="center"
                 android:text="Time Out"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold" />-->
 
             <TextView
                 style="@style/TextViewWidth0dp"

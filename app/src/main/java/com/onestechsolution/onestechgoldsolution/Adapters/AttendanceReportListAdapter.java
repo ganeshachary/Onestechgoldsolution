@@ -58,7 +58,7 @@ public class AttendanceReportListAdapter extends BaseAdapter implements View.OnC
         TextView tvDate = (TextView) vi.findViewById(R.id.tv_Date_AttendanceReportList);
         TextView tvStatus = (TextView) vi.findViewById(R.id.tv_Status_AttendanceReportList);
         TextView tvTimeIn = (TextView) vi.findViewById(R.id.tv_TimeIn_AttendanceReportList);
-        TextView tvTimeOut = (TextView) vi.findViewById(R.id.tv_TimeOut_AttendanceReportList);
+        //TextView tvTimeOut = (TextView) vi.findViewById(R.id.tv_TimeOut_AttendanceReportList);
         TextView tvReason = (TextView) vi.findViewById(R.id.tv_Reason_AttendanceReportList);
 
         Attendance dataitem = attendanceArrayList.get(position);
@@ -67,7 +67,7 @@ public class AttendanceReportListAdapter extends BaseAdapter implements View.OnC
             tvDate.setText(dataitem.getDate());
             tvStatus.setText(dataitem.getStatus());
             tvTimeIn.setText(dataitem.getTimeIn());
-            tvTimeOut.setText(dataitem.getTimeOut());
+            //tvTimeOut.setText(dataitem.getTimeOut());
             tvReason.setText(dataitem.getReason());
 
             Log.i(TAG, "getView: Reason: "+dataitem.getReason());

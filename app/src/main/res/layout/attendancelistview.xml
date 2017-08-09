@@ -28,18 +28,18 @@
         android:textColorHint="@color/colorPrimaryDark"
         android:textSize="14sp" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/tv_TimeOut_AttendanceReportList"
         style="@style/TextViewInListView"
-        android:layout_weight="1.5"
         android:hint="06:00 PM"
         android:textColor="@color/colorAccent"
         android:textColorHint="@color/colorAccent"
-        android:textSize="14sp" />
+        android:textSize="14sp" />-->
 
     <TextView
         android:id="@+id/tv_Reason_AttendanceReportList"
         style="@style/TextViewInListView"
+        android:layout_weight="1.5"
         android:hint="Came on Time"
         android:textSize="14sp" />
 

@@ -8,6 +8,7 @@ import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
@@ -93,6 +94,13 @@ public class AttendanceReportActivity extends AppCompatActivity implements Fetch
         Log.i(TAG, "onCreate: Username : "+username+" Password: "+password);
 
         listView = (ListView) findViewById(R.id.lv_AttendanceReportList_AttendanceReportListActivity);
+        listView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                v.getParent().requestDisallowInterceptTouchEvent(true);
+                return false;
+            }
+        });
 
         workerLoginIds = getIntent().getStringArrayListExtra("workerLoginIds");
         Log.i(TAG, "onCreate: workerLoginIds: " + workerLoginIds.toString());
