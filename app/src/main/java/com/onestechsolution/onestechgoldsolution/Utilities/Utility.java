@@ -38,7 +38,6 @@ public class Utility {
             Log.i(TAG, "getStringImage: Bitmap image not found inside Utility");
             return null;
         }
-
     }
 
     public static File getOutputMediaFile() {

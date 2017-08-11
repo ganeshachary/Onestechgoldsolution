@@ -100,7 +100,7 @@ public class SendNewLoanData extends AsyncTask<NewLoan, Integer, String> {
                 if (uris[i] == null) {
                     //uris[i] = Uri.parse("android.resource://"+context.getPackageName()+"/drawable/R.drawable.ic_customer");
                     Log.i(TAG, "doInBackground: Break condition was successfull if(uris[i]==null) ");
-                    break;
+                    break; //breaks the for loop
                 }
                 conn = (HttpURLConnection) url.openConnection();
                 //conn.setRequestMethod("POST");
@@ -247,12 +247,21 @@ public class SendNewLoanData extends AsyncTask<NewLoan, Integer, String> {
             //compressImage: imagePath: /external_files/Pictures/CameraDemo/IMG_20170524_170346.jpg
             Bitmap scaledBitmap = null;
 
+            //BitmapFactory.Options is a static class
             BitmapFactory.Options options = new BitmapFactory.Options();
+            /*
+            * Setting the inJustDecodeBounds property to true while decoding avoids memory allocation,
+            * returning null for the bitmap object but setting outWidth, outHeight and outMimeType.
+            * This technique allows you to read the dimensions and type of the image data prior to construction (and memory allocation) of the bitmap.
+            * */
+
             options.inJustDecodeBounds = true;
             Bitmap bmp = BitmapFactory.decodeFile(imagePath, options);
 
             int actualHeight = options.outHeight;
             int actualWidth = options.outWidth;
+            String imageType = options.outMimeType;
+            Log.i(TAG, "compressImage: imageType: "+imageType);
 
             float imgRatio = (float) actualWidth / (float) actualHeight;
             float maxRatio = maxWidth / maxHeight;

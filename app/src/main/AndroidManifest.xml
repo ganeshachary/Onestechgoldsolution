@@ -13,7 +13,7 @@
     <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
     <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -22,6 +22,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!-- Set the android:name attribute to android.support.v4.content.FileProvider.
+        Set the android:authorities attribute to a URI authority based on a domain you control;
+        for example, if you control the domain mydomain.com you should use the authority com.mydomain.fileprovider.
+        Set the android:exported attribute to false; the FileProvider does not need to be public.
+        Set the android:grantUriPermissions attribute to true, to allow you to grant temporary access to files.-->
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -92,15 +99,24 @@
         <activity
             android:name=".Activity.GoldInActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Activity.ReportsActivity" />
-        <activity android:name=".Activity.StockReportActivity" />
-        <activity android:name=".Activity.GoldInOutReportActivity" />
-        <activity android:name=".Activity.AttendanceReportActivity" />
-        <activity android:name=".Activity.StockEntryReportActivity" />
-        <activity android:name=".Activity.LoanReportActivity" />
-        <activity android:name=".Activity.LoanEntryReportActivity" />
-        <activity android:name=".Activity.GoldInOutEntryReportActivity" />
-        <activity android:name=".Activity.AttendanceEntryReportActivity"></activity>
+        <activity android:name=".Activity.ReportsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.StockReportActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.GoldInOutReportActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.AttendanceReportActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.StockEntryReportActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.LoanReportActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.LoanEntryReportActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.GoldInOutEntryReportActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.AttendanceEntryReportActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

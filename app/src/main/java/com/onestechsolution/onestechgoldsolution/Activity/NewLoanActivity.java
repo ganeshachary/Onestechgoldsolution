@@ -349,26 +349,40 @@ public class NewLoanActivity extends AppCompatActivity implements AdapterView.On
             }
 
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            //fileUri = Uri.fromFile(getOutputMediaFile());
+
+            /*
+                    FileProvider is a special subclass of ContentProvider that facilitates secure sharing of files associated with an app
+                    by creating a content:// Uri for a file instead of a file:/// Uri.
+                    A content URI allows you to grant read and write access using temporary access permissions.
+            */
+            // getUriForFile - Return a content URI for a given File.
             fileUri = FileProvider.getUriForFile(NewLoanActivity.this,
                     BuildConfig.APPLICATION_ID + ".provider",
                     Utility.getOutputMediaFile());
             Log.i(TAG, "captureImage: fileUri: " + fileUri);
+            // fileUri -> content://com.onestechsolution.onestechgoldsolution.provider/external_files/Pictures/GBVJewellers/GBV_20170810_160949.jpg
+
+            /*
+                Creates a Uri from a file. The URI has the form "file://". Encodes path characters with the exception of '/'.
+                Example: "file:///tmp/android.txt"
+            */
             fileUri1 = Uri.fromFile(Utility.getOutputMediaFile());
             Log.i(TAG, "captureImage: fileUri1: " + fileUri1);
+            // fileUri1 -> file:///storage/emulated/0/Pictures/GBVJewellers/GBV_20170810_160940.jpg
 
             newLoan.setLoanUrisPosition(imageposition, fileUri1);
+            Log.i(TAG, "captureImage: imageposition: "+imageposition);
+
             intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
             //intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri1);
             startActivityForResult(intent, REQUEST_PERMISSION_SETTING);
         } else {
-            Toast.makeText(this, "Permissions are not granted for the app to run.", Toast.LENGTH_SHORT).show();
+            Log.i(TAG, "captureImage: Permissions are not granted for the app to run. ");
         }
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        //Log.i(TAG, "onActivityResult: data: "+data.toString());
         if (requestCode == REQUEST_PERMISSION_SETTING) {
             if (ActivityCompat.checkSelfPermission(NewLoanActivity.this, permissionRequired[0]) == PackageManager.PERMISSION_GRANTED) {
                 proceedAfterPermission();
@@ -377,6 +391,7 @@ public class NewLoanActivity extends AppCompatActivity implements AdapterView.On
                     if (currentImage.getId() == R.id.iv_CustomerPhoto_NewLoanActivity) {
                         currentImage.setImageURI(fileUri);
                     } else {
+                        //after capturing item images set the checked image
                         currentImage.setImageResource(R.drawable.saved_48);
                     }
                     //imageView1.setImageURI(fileUri1);
@@ -394,8 +409,22 @@ public class NewLoanActivity extends AppCompatActivity implements AdapterView.On
     }
 
     private boolean askForPermissions() {
+
+        /*ActivityCompat.checkSelfPermission() or ContextCompat.checkSelfPermission() determines whether you have been granted a particular permission
+            Above method returns PackageManager.PERMISSION_GRANTED if the permissions are granted. else PERMISSION_DENIED
+            Protected Constructor -> ContextCompat():
+                This class should not be instantiated, but the constructor must be visible for the class to be extended (ex. in ActivityCompat).
+        */
+
         if (ActivityCompat.checkSelfPermission(NewLoanActivity.this, permissionRequired[0]) != PackageManager.PERMISSION_GRANTED
                 || ActivityCompat.checkSelfPermission(NewLoanActivity.this, permissionRequired[1]) != PackageManager.PERMISSION_GRANTED) {
+
+            /*
+                if the permissions was denied then to help find situations where the user might need an explanation,
+                Android provides a utility method, shouldShowRequestPermissionRationale().
+                This method returns true if the app has requested this permission previously and the user denied the request.
+                The method also returns false if a device policy prohibits the app from having that permission.
+            */
             if (ActivityCompat.shouldShowRequestPermissionRationale(NewLoanActivity.this, permissionRequired[0])
                     || ActivityCompat.shouldShowRequestPermissionRationale(NewLoanActivity.this, permissionRequired[1])) {
                 Log.i(TAG, "askForPermissions: Inside shouldShowRequestPermissionRationale");
@@ -417,7 +446,7 @@ public class NewLoanActivity extends AppCompatActivity implements AdapterView.On
                     }
                 });
                 builder.show();
-            } else if (permissionStatus.getBoolean(permissionRequired[0], false)) {
+            } /*else if (permissionStatus.getBoolean(permissionRequired[0], false)) {
                 Log.i(TAG, "askForPermissions: Inside permissionStatus.getBoolean(permissionRequired[0], false)");
                 //Previously Permission Request was cancelled with 'Dont Ask Again',
                 // Redirect to Settings after showing Information about why you need the permission
@@ -445,7 +474,7 @@ public class NewLoanActivity extends AppCompatActivity implements AdapterView.On
                     }
                 });
                 builder.show();
-            } else {
+            }*/ else {
                 ActivityCompat.requestPermissions(NewLoanActivity.this, permissionRequired, PERMISSION_CALLBACK_CONSTANT);
             }
             //Permission Required
@@ -483,10 +512,13 @@ public class NewLoanActivity extends AppCompatActivity implements AdapterView.On
 
             if (allgranted) {
                 proceedAfterPermission();
-            } else if (askForPermissions()) {
-                proceedAfterPermission();
             } else {
-                Toast.makeText(this, "Unable to get Permission", Toast.LENGTH_SHORT).show();
+                if(askForPermissions()) {
+                    Toast.makeText(this, "Permissions are granted.", Toast.LENGTH_SHORT).show();
+                } else {
+                    Log.i(TAG, "onRequestPermissionsResult: Permissions are not granted");
+                    //Toast.makeText(this, "Unable to get Permission", Toast.LENGTH_SHORT).show();
+                }
             }
         }
     }

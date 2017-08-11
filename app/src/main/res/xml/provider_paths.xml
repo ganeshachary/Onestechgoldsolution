@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
+
+    <!--
+        <external-path name="name" path="path" />
+        Represents files in the root of the external storage area.
+        The root path of this subdirectory is the same as the value returned by Environment.getExternalStorageDirectory().
+    -->
     <external-path
         name="external_files"
         path="." />
 </paths>
+
+<!--
+    To link the above file to the FileProvider, add a <meta-data> element as a child of the <provider> element that defines the FileProvider.
+    check the AndroidManifest file
+-->
