@@ -41,7 +41,7 @@ import java.util.Arrays;
 
 public class SendNewLoanData extends AsyncTask<NewLoan, Integer, String> {
     private static final float maxHeight = 600.0f; //1280.0f;
-    private static final float maxWidth = 600.0f;//1280.0f;
+    private static final float maxWidth = 600.0f; //1280.0f;
     private static final String TAG = "SendNewLoanData";
     String username, password;
     private Context context;
@@ -87,6 +87,7 @@ public class SendNewLoanData extends AsyncTask<NewLoan, Integer, String> {
         NewLoan loan = params[0];
         Uri uris[] = params[0].getImageUris();
         Log.i(TAG, "doInBackground: uris[]: " + Arrays.toString(params[0].getImageUris()));
+        //uris[]: [file:///storage/emulated/0/Pictures/GBVJewellers/GBV_20170816_123642.jpg, file:///storage/emulated/0/Pictures/GBVJewellers/GBV_20170816_123859.jpg, null, null, null, null, null, null, null]
         Log.i("server log", "doInBackground: loan.getLoanId(): " + loan.getLoanid());
 
         try {
@@ -110,10 +111,12 @@ public class SendNewLoanData extends AsyncTask<NewLoan, Integer, String> {
                 OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
                 Log.i(TAG, "doInBackground: uris.length: " + uris.length);
                 Log.i(TAG, "doInBackground: uris[i]: " + uris[i]);
+                //uris[i]: file:///storage/emulated/0/Pictures/GBVJewellers/GBV_20170816_123642.jpg
                 String encodedImage = Utility.getStringImage(compressImage(uris[i]));
                 Log.i(TAG, "doInBackground: encodedImage: " + encodedImage);
                 String fileUriName = uris[i].getPath();
                 Log.i(TAG, "doInBackground: fileUriName: " + fileUriName);
+                //fileUriName: /storage/emulated/0/Pictures/GBVJewellers/GBV_20170816_152723.jpg
                 fileUriName = fileUriName.substring(fileUriName.indexOf('G'));
                 fileUriName = fileUriName.substring(fileUriName.indexOf('/') + 1);
 
@@ -221,20 +224,27 @@ public class SendNewLoanData extends AsyncTask<NewLoan, Integer, String> {
     public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
         final int height = options.outHeight;
         final int width = options.outWidth;
+        Log.i(TAG, "calculateInSampleSize: height: "+height+" width: "+width+" reqWidth: "+reqWidth+" reqHeight: "+reqHeight);
+        // calculateInSampleSize: height: 3120 width: 4160 reqWidth: 600 reqHeight: 450
         int inSampleSize = 1;
 
         if (height > reqHeight || width > reqWidth) {
             final int heightRatio = Math.round((float) height / (float) reqHeight);
             final int widthRatio = Math.round((float) width / (float) reqWidth);
             inSampleSize = heightRatio < widthRatio ? heightRatio : widthRatio;
+            Log.i(TAG, "calculateInSampleSize: heightRatio: "+heightRatio+ " widthRatio: "+widthRatio+ " inSampleSize: "+inSampleSize);
+            //calculateInSampleSize: heightRatio: 7 widthRatio: 7 inSampleSize: 7
         }
         final float totalPixels = width * height;
         final float totalReqPixelsCap = reqWidth * reqHeight * 2;
-
+        Log.i(TAG, "calculateInSampleSize: totalPixels: "+totalPixels+" totalReqPixelsCap: "+totalReqPixelsCap);
+        // calculateInSampleSize: totalPixels: 1.29792E7 totalReqPixelsCap: 540000.0
         while (totalPixels / (inSampleSize * inSampleSize) > totalReqPixelsCap) {
             inSampleSize++;
         }
 
+        Log.i(TAG, "calculateInSampleSize: return inSampleSize: "+inSampleSize);
+        //calculateInSampleSize: return inSampleSize: 7
         return inSampleSize;
     }
 
@@ -244,7 +254,7 @@ public class SendNewLoanData extends AsyncTask<NewLoan, Integer, String> {
 
             //String imagePath = imageUri.uri.getPath();
             Log.i(TAG, "compressImage: imagePath: " + imagePath);
-            //compressImage: imagePath: /external_files/Pictures/CameraDemo/IMG_20170524_170346.jpg
+            // imagePath: /storage/emulated/0/Pictures/GBVJewellers/GBV_20170816_123642.jpg
             Bitmap scaledBitmap = null;
 
             //BitmapFactory.Options is a static class
@@ -257,36 +267,65 @@ public class SendNewLoanData extends AsyncTask<NewLoan, Integer, String> {
 
             options.inJustDecodeBounds = true;
             Bitmap bmp = BitmapFactory.decodeFile(imagePath, options);
+            //decodeFile(String pathName, BitmapFactory.Options opts):  Decode a file path into a bitmap.
 
             int actualHeight = options.outHeight;
             int actualWidth = options.outWidth;
             String imageType = options.outMimeType;
-            Log.i(TAG, "compressImage: imageType: "+imageType);
+
+            Log.i(TAG, "compressImage: actualHeight: "+actualHeight+ " actualWidth: "+actualWidth+" imageType: "+imageType);
+            //compressImage: actualHeight: 3120 actualWidth: 4160 imageType: image/jpeg
 
             float imgRatio = (float) actualWidth / (float) actualHeight;
+            Log.i(TAG, "compressImage: imgRatio: "+imgRatio);
+            //compressImage: imgRatio: 1.3333334
+
             float maxRatio = maxWidth / maxHeight;
+            Log.i(TAG, "compressImage: maxRatio: "+maxRatio);
+            //compressImage: maxRatio: 1.0
 
             if (actualHeight > maxHeight || actualWidth > maxWidth) {
                 if (imgRatio < maxRatio) {
+                    //Image captured in portrait mode
+                    Log.i(TAG, "compressImage: Inside portrait mode");
                     imgRatio = maxHeight / actualHeight;
                     actualWidth = (int) (imgRatio * actualWidth);
                     actualHeight = (int) maxHeight;
                 } else if (imgRatio > maxRatio) {
+                    //Image is captured in landscape mode
+                    Log.i(TAG, "compressImage: Inside landscape mode");
                     imgRatio = maxWidth / actualWidth;
                     actualHeight = (int) (imgRatio * actualHeight);
                     actualWidth = (int) maxWidth;
                 } else {
+                    Log.i(TAG, "compressImage: Use default Height and width sizes");
                     actualHeight = (int) maxHeight;
                     actualWidth = (int) maxWidth;
                 }
             }
 
+            Log.i(TAG, "compressImage: actualHeight: "+actualHeight+ " actualWidth: "+actualWidth+ " imageType: "+imageType+
+            " ImageRatio: "+imgRatio+" maxRatio: "+maxRatio);
+            //compressImage: actualHeight: 450 actualWidth: 600 imageType: image/jpeg ImageRatio: 0.14423077 maxRatio: 1.0
+
             options.inSampleSize = calculateInSampleSize(options, actualWidth, actualHeight);
+            /*
+                inSampleSize:
+                If set to a value > 1, requests the decoder to subsample the original image, returning a smaller image to save memory.
+            */
             options.inJustDecodeBounds = false;
-            options.inDither = false;
+            /*
+                inJustDecodeBounds:
+            *   If set to true, the decoder will return null (no bitmap), but the out... fields will still be set,
+            *   allowing the caller to query the bitmap without having to allocate the memory for its pixels.
+            * */
+
+            /* options.inDither = false;
             options.inPurgeable = true;
-            options.inInputShareable = true;
+            options.inInputShareable = true;*/
+
             options.inTempStorage = new byte[16 * 1024];
+            //inTempStorage: Temp storage to use for decoding.
 
             try {
                 bmp = BitmapFactory.decodeFile(imagePath, options);

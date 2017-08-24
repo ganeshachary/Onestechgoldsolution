@@ -499,10 +499,6 @@ public class NewLoan implements Parcelable{
         return imageUris;
     }
 
-    public void setImageUris(Uri[] imageUris) {
-        this.imageUris = imageUris;
-    }
-
     public String getLoanid() {
         return loanid;
     }

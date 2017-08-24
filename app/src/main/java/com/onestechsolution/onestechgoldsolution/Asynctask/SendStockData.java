@@ -37,8 +37,8 @@ import java.net.URLEncoder;
  */
 
 public class SendStockData extends AsyncTask<Stock, Integer, String> {
-    private static final float maxHeight = 600.0f;
-    private static final float maxWidth = 600.0f;
+    private static final float maxHeight = 800.0f;
+    private static final float maxWidth = 800.0f;
     private static String TAG = "SendStockData";
     String message;
     private Context context;
