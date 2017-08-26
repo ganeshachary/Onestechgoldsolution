@@ -7,6 +7,7 @@ package com.onestechsolution.onestechgoldsolution.Utilities;
 public class SetURL {
     //private static final String URL = "http://192.168.0.104:8081/GBVJewellers/ImageTesting/";
     private static final String URL = "http://www.onestechsolution.com/GBVJewellers/ImageTesting/";
+   // private static final String URL = "http://devwellupsolutions.com/GBVJewellers/ImageTesting/";
     public static final String URLUploads = URL+"uploads/";
     public static final String LoginCheck = URL + "loginCheck.php";
 
