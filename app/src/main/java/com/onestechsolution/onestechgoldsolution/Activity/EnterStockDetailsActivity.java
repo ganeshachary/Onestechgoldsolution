@@ -172,6 +172,8 @@ public class EnterStockDetailsActivity extends AppCompatActivity implements Adap
             Toast.makeText(this, "Please capture the Item photo", Toast.LENGTH_SHORT).show();
         } else if(date.isEmpty() || date.equals(null)) {
             Toast.makeText(this, "Date cannot be empty. Please contact support.", Toast.LENGTH_SHORT).show();
+        } else if(itemType.isEmpty() || itemType.equalsIgnoreCase("Select")) {
+            Toast.makeText(this, "Please select the type of the item.", Toast.LENGTH_SHORT).show();
         } else if(netWeight.isEmpty() || netWeight.equals(null)) {
             Toast.makeText(this, "Please enter the value for Net weight.", Toast.LENGTH_SHORT).show();
         } else if(SKU.isEmpty() || SKU.equals(null)) {

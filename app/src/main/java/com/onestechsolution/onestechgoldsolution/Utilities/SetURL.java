@@ -34,5 +34,8 @@ public class SetURL {
     public static final String SendWorkerAttendanceData = URL + "uploadAttendance.php";
 
 
+    //public static final String SendSaleDataTesting = URL + "uploadSaleDetailsTesting.php";
+
+
 
 }

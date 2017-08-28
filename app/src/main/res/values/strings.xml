@@ -99,6 +99,7 @@
     </string-array>
 
     <string-array name="item_type">
+        <item>Select</item>
         <item>Ring</item>
         <item>Chain</item>
         <item>Stud</item>

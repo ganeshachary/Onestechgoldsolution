@@ -250,6 +250,22 @@ public class NewLoanActivity extends AppCompatActivity implements AdapterView.On
                     Toast.makeText(this, "Please enter the Item weights for item: " + ((Spinner) findViewById(itemTypeSpinner[i])).getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
                 }
             }
+            Log.i(TAG, "onUpload: status : "+status);
+        }
+
+        if(status) {
+            Log.i(TAG, "onUpload: inside status for select");
+            checkSize = (((Spinner) findViewById(R.id.spnr_ItemTypeCount_NewLoanActivity)).getSelectedItem().toString());
+            size = Integer.parseInt(checkSize);
+            String itemTypeValues[] = new String[8];
+            for (int i = 0; i < size; i++) {
+                itemTypeValues[i] = ((Spinner) findViewById(itemTypeSpinner[i])).getSelectedItem().toString();
+                if(itemTypeValues[i].equalsIgnoreCase("Select")) {
+                    status = false;
+                    Toast.makeText(this, "Please select the type of an item", Toast.LENGTH_SHORT).show();
+                }
+                Log.i(TAG, "onSave: Line 267 Item type[" + i + "]: " + itemTypeValues[i] + " size: "+ size);
+            }
         }
 
 
@@ -282,8 +298,9 @@ public class NewLoanActivity extends AppCompatActivity implements AdapterView.On
             String itemTypeValues[] = new String[8];
             for (int i = 0; i < size; i++) {
                 itemTypeValues[i] = ((Spinner) findViewById(itemTypeSpinner[i])).getSelectedItem().toString();
-                Log.i(TAG, "onSave: Item type[" + i + "]: " + itemTypeValues[i]);
+                Log.i(TAG, "onSave: Line 301 Item type[" + i + "]: " + itemTypeValues[i] + " size "+size);
             }
+
             newLoan.setItemType(itemTypeValues);
             Log.i(TAG, "onSave: Item type: " + Arrays.toString(newLoan.getItemType()));
 
