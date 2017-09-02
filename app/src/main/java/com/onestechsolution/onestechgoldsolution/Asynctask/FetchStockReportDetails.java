@@ -55,8 +55,9 @@ public class FetchStockReportDetails extends AsyncTask<String, String, String> {
 
         String data = "";
         try {
-
-            String link = SetURL.FetchStockReportDetails;
+            SetURL setURL = new SetURL(context);
+            String link = setURL.FetchStockReportDetails;
+            //String link = SetURL.FetchStockReportDetails;
             URL url = new URL(link);
             URLConnection conn = url.openConnection();
             conn.setDoOutput(true);

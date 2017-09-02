@@ -54,8 +54,8 @@ public class SendGoldInData extends AsyncTask<String, Integer, String> {
     protected String doInBackground(String... params) {
         String line = "";
         String data = "";
-        //String link = "http://192.168.0.102:8080/ImageTesting/uploadGoldIn.php";
-        String link = SetURL.SendGoldInData;
+        SetURL setURL = new SetURL(context);
+        String link = setURL.SendGoldInData;
 
         StringBuilder sb = null;
         URL url;

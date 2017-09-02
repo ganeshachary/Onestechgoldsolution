@@ -79,10 +79,14 @@ public class WorkerListAdapter extends BaseAdapter implements View.OnClickListen
         Log.i(TAG, "getView: dataItem.getPhotourl: " + dataitem.getImageNameForList());
         //new DownloadImageTask(thumb_image).execute("https://qsf.ec.quoracdn.net/-3-images.new_grid.profile_pic_default_small.png-26-902da2b339fedf49.png");
         //new DownloadImageTask(thumb_image).execute("http://192.168.0.103/GBVJewellers/ImageTesting/uploads/GBV_20170616_113211.jpg");
+
+        SetURL setURL = new SetURL(context);
+        String link = setURL.URLUploads;
         if(dataitem.getImageNameForList()!=null) {
             //new DownloadImageTask(thumb_image).execute(SetURL.URLUploads+dataitem.getWorkerPhoto());
             Picasso.with(context)
-                    .load(SetURL.URLUploads + dataitem.getImageNameForList())
+                    //.load(SetURL.URLUploads + dataitem.getImageNameForList())
+                    .load(link + dataitem.getImageNameForList())
                     //.placeholder(R.drawable.ic_user)   // optional
                     .noPlaceholder()
                     .error(R.drawable.error)      // optional

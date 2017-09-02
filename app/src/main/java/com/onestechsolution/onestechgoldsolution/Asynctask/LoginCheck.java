@@ -52,9 +52,9 @@ public class LoginCheck extends AsyncTask<String, String, String> {
 
     @Override
     protected String doInBackground(String... params) {
-
-        //String link = "http://onestechsolution.com/ImageTesting/loginCheck.php";
-        String link = SetURL.LoginCheck;
+        SetURL setURL = new SetURL(context);
+        String link = setURL.LoginCheck;
+        //String link = SetURL.LoginCheck;
         try {
             String data = "";
 

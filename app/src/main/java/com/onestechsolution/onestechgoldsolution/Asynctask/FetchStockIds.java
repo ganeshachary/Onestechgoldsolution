@@ -51,7 +51,10 @@ public class FetchStockIds extends AsyncTask<String, String, String> {
         String text = "";
         String data = "";
         try {
-            String link = SetURL.FetchStockIds;
+            SetURL setURL = new SetURL(context);
+            String link = setURL.FetchStockIds;
+            //String link = SetURL.FetchStockIds;
+            Log.i(TAG, "doInBackground: link: "+link);
             URL url = new URL(link);
             URLConnection conn = url.openConnection();
             conn.setDoOutput(true);

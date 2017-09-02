@@ -1,5 +1,6 @@
 package com.onestechsolution.onestechgoldsolution.Activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -79,7 +80,7 @@ public class GoldInOutListActivity extends AppCompatActivity {
             if (searchValue.equals(null) || searchValue.isEmpty()) {
                 Toast.makeText(this, "Please enter some value to search for", Toast.LENGTH_SHORT).show();
             } else {
-                new FetchGoldInOutDetails().execute(searchValue);
+                new FetchGoldInOutDetails(this).execute(searchValue);
             }
         } else {
             Toast.makeText(this, "Network issue. Please switch on the internet.", Toast.LENGTH_SHORT).show();
@@ -138,11 +139,15 @@ public class GoldInOutListActivity extends AppCompatActivity {
     }
 
     public class FetchGoldInOutDetails extends AsyncTask<String, String, String> {
-
+        Context context;
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
+        }
+
+        public FetchGoldInOutDetails(Context context) {
+            this.context = context;
         }
 
         @Override
@@ -155,7 +160,9 @@ public class GoldInOutListActivity extends AppCompatActivity {
             try {
                 //String link = "http://onestechsolution.com/ImageTesting/fetchLoanDetails.php";
                 //String link = "http://192.168.0.101:8080/ImageTesting/fetchGoldInOutDetails.php";
-                String link = SetURL.FetchGoldInOutDetails;
+                SetURL setURL = new SetURL(context);
+                String link = setURL.FetchGoldInOutDetails;
+                //String link = ""; //SetURL.FetchGoldInOutDetails;
                 URL url = new URL(link);
                 URLConnection conn = url.openConnection();
                 conn.setDoOutput(true);

@@ -9,6 +9,11 @@
     android:padding="8dp"
     tools:context="com.onestechsolution.onestechgoldsolution.Activity.HomeActivity">
 
+    <TextView
+        android:id="@+id/tv_TestEnv_HomeActivity"
+        style="@style/Headers"
+        android:visibility="gone"
+        android:text="TEST"/>
 
     <Button
         android:id="@+id/button2"

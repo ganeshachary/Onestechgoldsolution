@@ -57,8 +57,9 @@ public class SendWorkerAttendanceData extends AsyncTask<Attendance, Integer, Str
     protected String doInBackground(Attendance... params) {
         String line = "";
         String data = "";
-        //String link = "http://192.168.0.102:8080/ImageTesting/UploadAttendance.php";
-        String link = SetURL.SendWorkerAttendanceData;
+        SetURL setURL = new SetURL(context);
+        String link = setURL.SendWorkerAttendanceData;
+        //String link = SetURL.SendWorkerAttendanceData;
         StringBuilder sb = null;
         URL url;
         HttpURLConnection conn;

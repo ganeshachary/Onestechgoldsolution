@@ -80,7 +80,9 @@ public class SendNewLoanData extends AsyncTask<NewLoan, Integer, String> {
         URL url;
         boolean status = true;
 
-        String link = SetURL.SendNewLoanData;
+        SetURL setURL = new SetURL(context);
+        String link = setURL.SendNewLoanData;
+        //String link = SetURL.SendNewLoanData;
 
         HttpURLConnection conn;
         //Params[0] is a complete loan object which is passed from NewLoanActivity

@@ -1,5 +1,6 @@
 package com.onestechsolution.onestechgoldsolution.Activity;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -116,7 +117,7 @@ public class WorkerListActivity extends AppCompatActivity {
             if (searchValue.equals(null) || searchValue.isEmpty()) {
                 Toast.makeText(this, "Please enter some value to search for", Toast.LENGTH_SHORT).show();
             } else {
-                new FetchWorkerDetails().execute(searchValue);
+                new FetchWorkerDetails(this).execute(searchValue);
             }
         } else {
             Toast.makeText(this, "Network issue. Please switch on the internet.", Toast.LENGTH_SHORT).show();
@@ -125,12 +126,16 @@ public class WorkerListActivity extends AppCompatActivity {
 
 
     public class FetchWorkerDetails extends AsyncTask<String, String, String> {
-
+        Context context;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
+        }
+
+        public FetchWorkerDetails(Context context) {
+            this.context = context;
         }
 
         @Override
@@ -143,7 +148,9 @@ public class WorkerListActivity extends AppCompatActivity {
             try {
                 //String link = "http://onestechsolution.com/ImageTesting/fetchLoanDetails.php";
                 //String link = "http://192.168.0.102:8080/ImageTesting/fetchWorkerDetails.php";
-                String link = SetURL.FetchWorkerDetails;
+                SetURL setURL = new SetURL(context);
+                String link = setURL.FetchWorkerDetails;
+                //String link = SetURL.FetchWorkerDetails;
                 URL url = new URL(link);
                 URLConnection conn = url.openConnection();
                 conn.setDoOutput(true);

@@ -56,7 +56,10 @@ public class SendSaleData extends AsyncTask<Stock, Integer, String> {
     protected String doInBackground(Stock... params) {
         String line, data = "";
         //String link = "http://192.168.0.102:8080/ImageTesting/uploadSaleDetails.php";
-        String link = SetURL.SendSaleData;
+        SetURL setURL = new SetURL(context);
+        String link = setURL.SendSaleData;
+
+        //String link = SetURL.SendSaleData;
         StringBuilder sb = null;
         URL url;
         HttpURLConnection conn;

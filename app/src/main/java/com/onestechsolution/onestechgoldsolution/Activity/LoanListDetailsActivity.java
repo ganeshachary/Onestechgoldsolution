@@ -179,7 +179,8 @@ public class LoanListDetailsActivity extends AppCompatActivity implements Adapte
 
 
         Picasso.with(this)
-                .load(SetURL.URLUploads + newLoan.getCustPhotoUri())
+                //.load(SetURL.URLUploads + newLoan.getCustPhotoUri())
+                .load("" + newLoan.getCustPhotoUri())
                 //.placeholder(R.drawable.ic_user)   // optional
                 .noPlaceholder()
                 .error(R.drawable.ic_customer)      // optional

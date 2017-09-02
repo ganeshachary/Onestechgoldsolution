@@ -87,7 +87,10 @@ public class SendStockData extends AsyncTask<Stock, Integer, String> {
         String line = "";
         String data = "";
         //String link = "http://192.168.0.102:8080/ImageTesting/uploadStockDetails.php";
-        String link = SetURL.SendStockData;
+        SetURL setURL = new SetURL(context);
+        String link = setURL.SendStockData;
+
+        //String link =SetURL.SendStockData;
         boolean status = true;
         StringBuilder sb = null;
         URL url;

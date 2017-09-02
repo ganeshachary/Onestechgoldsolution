@@ -53,8 +53,10 @@ public class FetchLoanReportDetails extends AsyncTask<String, String, String> {
 
         String data = "";
         try {
+            SetURL setURL = new SetURL(context);
+            String link = setURL.FetchLoanReportDetails;
 
-            String link = SetURL.FetchLoanReportDetails;
+            //String link = SetURL.FetchLoanReportDetails;
             URL url = new URL(link);
             URLConnection conn = url.openConnection();
             conn.setDoOutput(true);

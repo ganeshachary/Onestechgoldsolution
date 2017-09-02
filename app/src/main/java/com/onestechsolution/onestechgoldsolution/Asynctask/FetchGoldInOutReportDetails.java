@@ -54,7 +54,9 @@ public class FetchGoldInOutReportDetails extends AsyncTask<String, String, Strin
         String data = "";
         try {
 
-            String link = SetURL.FetchGoldInOutReportDetails;
+            SetURL setURL = new SetURL(context);
+            String link = setURL.FetchGoldInOutReportDetails;
+            //String link = SetURL.FetchGoldInOutReportDetails;
             URL url = new URL(link);
             URLConnection conn = url.openConnection();
             conn.setDoOutput(true);

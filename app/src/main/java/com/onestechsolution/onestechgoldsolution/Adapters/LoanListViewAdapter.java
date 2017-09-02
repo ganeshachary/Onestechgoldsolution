@@ -74,11 +74,15 @@ public class LoanListViewAdapter extends BaseAdapter implements View.OnClickList
 
         Log.i(TAG, "getView: dataItem.getPhotourl: " + dataitem.getCustPhotoUri());
         //new DownloadImageTask(custPhoto).execute("https://qsf.ec.quoracdn.net/-3-images.new_grid.profile_pic_default_small.png-26-902da2b339fedf49.png");
+
+        SetURL setURL = new SetURL(context);
+        String link = setURL.URLUploads;
+
         if(dataitem.getCustPhotoUri()!=null)
             //new DownloadImageTask(custPhoto).execute(SetURL.URLUploads+dataitem.getCustPhotoUri());
             Picasso.with(context)
-                    .load(SetURL.URLUploads + dataitem.getCustPhotoUri())
-                    //.placeholder(R.drawable.ic_user)   // optional
+                    //.load(SetURL.URLUploads + dataitem.getCustPhotoUri())
+                    .load(link + dataitem.getCustPhotoUri())
                     .noPlaceholder()
                     .error(R.drawable.ic_customer)      // optional
                     .resize(50, 50)                        // optional

@@ -56,7 +56,10 @@ public class FetchWorkerLoginIds extends AsyncTask<String, String, String> {
         String data = "";
         try {
             //String link = "http://192.168.0.102:8080/ImageTesting/fetchWorkerLoginIds.php";
-            String link = SetURL.FetchWorkerLoginIdsForAttendance;
+            SetURL setURL = new SetURL(context);
+            String link = setURL.FetchWorkerLoginIdsForAttendance;
+
+            //String link = SetURL.FetchWorkerLoginIdsForAttendance;
             URL url = new URL(link);
             URLConnection conn = url.openConnection();
             conn.setDoOutput(true);

@@ -224,7 +224,9 @@ public class LoanListActivity extends AppCompatActivity {
             try {
                 //String link = "http://onestechsolution.com/ImageTesting/fetchLoanDetails.php";
                 //String link = "http://192.168.0.102:8080/ImageTesting/fetchLoanDetails.php";
-                String link = SetURL.FetchLoanDetails;
+                SetURL setURL = new SetURL(context);
+                String link = setURL.FetchLoanDetails;
+                //String link = SetURL.FetchLoanDetails;
                 URL url = new URL(link);
                 URLConnection conn = url.openConnection();
                 conn.setDoOutput(true);

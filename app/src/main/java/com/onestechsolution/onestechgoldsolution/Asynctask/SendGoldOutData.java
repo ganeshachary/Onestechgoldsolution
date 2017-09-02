@@ -60,7 +60,9 @@ public class SendGoldOutData extends AsyncTask<GoldInOut, Integer, String> {
         String line = "";
         String data = "";
         //String link = "http://192.168.0.102:8080/ImageTesting/uploadGoldOut.php";
-        String link = SetURL.SendGoldOutData;
+        SetURL setURL = new SetURL(context);
+        String link = setURL.SendGoldOutData;
+        //String link = SetURL.SendGoldOutData;
 
         StringBuilder sb = null;
         URL url;

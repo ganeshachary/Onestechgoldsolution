@@ -53,12 +53,13 @@ public class FetchAttendanceReportDetails extends AsyncTask<String, String, Stri
         String workerLoginId = params[0];
         String fromDate = params[1];
         String toDate = params[2];
+        SetURL setURL = new SetURL(context);
         Log.i(TAG, "doInBackground: workerLoginId: "+workerLoginId+" fromDate: "+fromDate+" toDate: "+toDate);
 
         String data = "";
         try {
 
-            String link = SetURL.FetchAttendanceReportDetails;
+            String link = setURL.FetchAttendanceReportDetails;
             URL url = new URL(link);
             URLConnection conn = url.openConnection();
             conn.setDoOutput(true);

@@ -59,8 +59,10 @@ public class SendLoanListDetailsData extends AsyncTask<NewLoan, Integer, String>
         String line = "";
         String data = "";
 
-        String link = SetURL.SendLoanListDetailsData;
-        //String link = "";
+        SetURL setURL = new SetURL(context);
+        String link = setURL.SendLoanListDetailsData;
+
+        //String link = SetURL.SendLoanListDetailsData;
         StringBuilder sb = null;
         URL url;
         HttpURLConnection conn;

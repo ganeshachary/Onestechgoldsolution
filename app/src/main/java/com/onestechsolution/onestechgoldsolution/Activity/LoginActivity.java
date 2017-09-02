@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = (EditText) findViewById(R.id.et_password_LoginActivity);
         etUsername.setText(Utility.getPreferences(this, "username"));
         etPassword.setText(Utility.getPreferences(this, "password"));
+        Utility.setPreferences(this, "environment","PROD");
         Log.i(TAG, "onCreate: username: " + Utility.getPreferences(this, "username") + " password: " + Utility.getPreferences(this, "password") + " role: " + Utility.getPreferences(this, "role"));
     }
 

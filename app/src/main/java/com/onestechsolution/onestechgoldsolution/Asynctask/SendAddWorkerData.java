@@ -95,8 +95,10 @@ public class SendAddWorkerData extends AsyncTask<Worker, Integer, String> {
         URL url;
         boolean status = true;
         //String link = "http://192.168.0.102:8080/ImageTesting/uploadWorkerDetails.php";
-        //String link = "http://onestechsolution.com/ImageTesting/uploadImage.php";
-        String link = SetURL.SendAddWorkerData;
+
+        SetURL setURL = new SetURL(context);
+        String link = setURL.SendAddWorkerData;
+
         HttpURLConnection conn;
 
         Worker worker = params[0];
@@ -111,7 +113,7 @@ public class SendAddWorkerData extends AsyncTask<Worker, Integer, String> {
 
             sb = new StringBuilder();
             conn = (HttpURLConnection) url.openConnection();
-
+            conn.setRequestMethod("POST");
             conn.setDoOutput(true);
             conn.setDoInput(true);
             OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
@@ -134,6 +136,9 @@ public class SendAddWorkerData extends AsyncTask<Worker, Integer, String> {
 
             wr.write(data);
             wr.flush();
+
+            int responseCode = conn.getResponseCode();
+            Log.i(TAG, "doInBackground: For Image Part responseCode: "+responseCode);
 
             reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             line = null;
@@ -183,6 +188,8 @@ public class SendAddWorkerData extends AsyncTask<Worker, Integer, String> {
                 outputStreamWriter.write(data);
                 outputStreamWriter.flush();
 
+                int responseCodeJSON = conn.getResponseCode();
+                Log.i(TAG, "doInBackground: responseCode: "+responseCodeJSON);
                 reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 
                 line = null;

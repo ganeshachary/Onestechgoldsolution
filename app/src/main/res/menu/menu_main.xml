@@ -12,7 +12,26 @@
         android:id="@+id/action_update"
         app:showAsAction="withText|always"
         android:title="Update">
-
     </item>
+
+    <group android:id="@+id/group_environment"
+        android:checkableBehavior="single"
+        android:visible="false">
+        <item
+            android:id="@+id/action_test"
+            app:showAsAction="ifRoom"
+            android:visible="true"
+            android:title="TEST">
+        </item>
+
+        <item
+            android:id="@+id/action_prod"
+            app:showAsAction="ifRoom"
+            android:visible="true"
+            android:title="PROD">
+
+        </item>
+    </group>
+
 
 </menu>
