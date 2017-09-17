@@ -47,11 +47,11 @@ public class HomeActivity extends AppCompatActivity {
 
         if (role.equalsIgnoreCase("admin")) {
             //changeEnvironment.setVisible(true);
-            menu.setGroupVisible(R.id.group_environment,true);
+          //  menu.setGroupVisible(R.id.group_environment,true);
 
         } else {
             //changeEnvironment.setVisible(false);
-            menu.setGroupVisible(R.id.group_environment, false);
+            //menu.setGroupVisible(R.id.group_environment, false);
         }
 
         return true;
@@ -76,7 +76,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent1);
                 break;
 
-            case R.id.action_test:
+            /*case R.id.action_test:
                 if (item.isChecked()) {
                     item.setChecked(false);
                 } else {
@@ -98,7 +98,7 @@ public class HomeActivity extends AppCompatActivity {
                 Utility.setPreferences(this, "environment", "PROD");
                 Toast.makeText(this, "Environment changed to PROD", Toast.LENGTH_SHORT).show();
                 Log.i(TAG, "onOptionsItemSelected: environment: " + Utility.getPreferences(this, "environment"));
-                return true;
+                return true;*/
 
             default:
                 return super.onOptionsItemSelected(item);

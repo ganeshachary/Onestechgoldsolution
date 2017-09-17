@@ -14,7 +14,7 @@
         android:title="Update">
     </item>
 
-    <group android:id="@+id/group_environment"
+    <!--<group android:id="@+id/group_environment"
         android:checkableBehavior="single"
         android:visible="false">
         <item
@@ -31,7 +31,7 @@
             android:title="PROD">
 
         </item>
-    </group>
+    </group>-->
 
 
 </menu>
