@@ -23,7 +23,7 @@ public class AttendanceEntryReportActivity extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.wv_AttendanceWebview_AttendanceEntryReport);
         progressBar = (ProgressBar) findViewById(R.id.pb_ProgressBar_AttendanceEntryReport);
         webView.setWebViewClient(new AppWebViewClients(progressBar));
-        webView.loadUrl("http://onestechsolution.com/GBVJewellers/displayAttendanceDetails.php");
+        webView.loadUrl("http://103.231.8.162/displayAttendanceDetails.php");
         webView.getSettings().setSupportZoom(true);
         webView.getSettings().setBuiltInZoomControls(true);
         //webView.getSettings().setDisplayZoomControls(true);

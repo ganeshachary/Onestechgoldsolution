@@ -25,7 +25,7 @@ public class LoanEntryReportActivity extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.pb_ProgressBar_LoanEntryReport);
 
         webView.setWebViewClient(new AppWebViewClients(progressBar));
-        webView.loadUrl("http://onestechsolution.com/GBVJewellers/displayLoanDetails.php");
+        webView.loadUrl("http://103.231.8.162/displayLoanDetails.php");
         webView.getSettings().setSupportZoom(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         webView.getSettings().setBuiltInZoomControls(true);

@@ -71,7 +71,7 @@ public class HomeActivity extends AppCompatActivity {
                 break;
 
             case R.id.action_update:
-                Uri uri = Uri.parse("http://onestechsolution.com/GBVJewellers/apk/GAudit.apk");
+                Uri uri = Uri.parse("http://103.231.8.162/apk/GAudit.apk");
                 Intent intent1 = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent1);
                 break;

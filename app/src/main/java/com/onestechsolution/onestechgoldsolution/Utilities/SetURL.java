@@ -40,7 +40,7 @@ public class SetURL {
     public final String SendStockData;
 
     //PROD URL
-    private static String prodWebUrl = "http://www.onestechsolution.com/GBVJewellers/ImageTesting/";
+    private static String prodWebUrl = "http://103.231.8.162/ImageTesting/";
 
     //TEST URL
     private static String testWebUrl= "http://devwellupsolutions.com/GBVJewellers/ImageTesting/";

@@ -25,7 +25,7 @@ public class GoldInOutEntryReportActivity extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.wv_GoldInOutWebView_GoldInOutEntryReport);
         progressBar = (ProgressBar) findViewById(R.id.pb_ProgressBar_GoldInOutEntryReport);
         webView.setWebViewClient(new AppWebViewClients(progressBar));
-        webView.loadUrl("http://onestechsolution.com/GBVJewellers/displayWorkerGoldDetails.php");
+        webView.loadUrl("http://103.231.8.162/displayWorkerGoldDetails.php");
 
         webView.getSettings().setSupportZoom(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
