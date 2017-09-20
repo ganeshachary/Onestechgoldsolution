@@ -29,13 +29,14 @@
          android:text="Order"
          style="@style/button"/>-->
 
-
+<!--
     <Button
         style="@style/ButtonWithHeight0dp"
         android:background="@drawable/yellow_button"
         android:drawableLeft="@drawable/ic_welder"
         android:onClick="openWorkerActivity"
-        android:text="Worker"/>
+        android:text="Worker"/> -->
+
     <!--<Button
         android:onClick="openQRCodeActivity"
         android:text="QR Code"

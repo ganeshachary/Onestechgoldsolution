@@ -284,13 +284,13 @@ public class ReportsActivity extends AppCompatActivity implements FetchWorkerLog
     //for fetching worker login ids
     @Override
     public void processFinish(String output, View view) {
-        parseJSON(output);
-        if (view == findViewById(R.id.btn_AttendanceReport_ReportsActivity)) {
+       /* parseJSON(output);
+       if (view == findViewById(R.id.btn_AttendanceReport_ReportsActivity)) {
             Intent intent = new Intent(this, AttendanceReportActivity.class);
             Log.i(TAG, "openAttendanceReportActivity: workerLoginIds: " + workerLoginIds.toString());
             intent.putStringArrayListExtra("workerLoginIds", workerLoginIds);
             startActivity(intent);
-        }
+        }*/
     }
 
     @Override
