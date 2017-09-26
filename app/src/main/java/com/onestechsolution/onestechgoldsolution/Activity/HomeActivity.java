@@ -154,4 +154,15 @@ public class HomeActivity extends AppCompatActivity {
             Toast.makeText(this, "Network issue. Please switch on your internet.", Toast.LENGTH_SHORT).show();
         }
     }
+
+    public void openAddCustomerActivity(View view) {
+            if(Utility.isNetworkAvailable(this))
+            {
+                startActivity(new Intent(this,AddNewCustomerDetails.class));
+            }
+            else{
+                Toast.makeText(this, "Network issue. Please switch on your internet", Toast.LENGTH_SHORT).show();
+            }
+
+    }
 }
