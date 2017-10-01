@@ -8,6 +8,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.onestechsolution.onestechgoldsolution.Activity.AddNewCustomerDetails;
 import com.onestechsolution.onestechgoldsolution.Activity.WorkerHomeActivity;
 import com.onestechsolution.onestechgoldsolution.Model.CustomerDeatils;
 import com.onestechsolution.onestechgoldsolution.Utilities.SetURL;
@@ -111,8 +112,8 @@ public class AddCustomerDetailsAsyncTask extends AsyncTask<CustomerDeatils,Strin
             while ((line = reader.readLine()) != null) {
                 sb.append(line);
             }
-            JSONObject jsonObject = new JSONObject(sb.toString());
-            message = jsonObject.getString("message");
+           // JSONObject jsonObject = new JSONObject(sb.toString());
+           // message = jsonObject.getString("status");
 
 
             Log.i(TAG, "doInBackground: Text data Response: " + message);
@@ -130,15 +131,31 @@ public class AddCustomerDetailsAsyncTask extends AsyncTask<CustomerDeatils,Strin
         }
 
 
-        return message;
+        return sb.toString();
     }
 
 
     @Override
     protected void onPostExecute(String message) {
         super.onPostExecute(message);
+        JSONObject jsonObject = null;
+        Boolean statusmessage = true;
+        String popupMessage ="";
+        try {
+            jsonObject = new JSONObject(message);
+            statusmessage = jsonObject.getBoolean("status");
+            popupMessage = jsonObject.getString("message");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
         progressDialog.dismiss();
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, popupMessage, Toast.LENGTH_LONG).show();
+        if(!statusmessage) {
+            ((AddNewCustomerDetails) context).clearAllValue();
+        }
+
         Log.i(TAG, "onPostExecute: s: " + message);
 
     }

@@ -29,6 +29,7 @@ public class AddNewCustomerDetails extends AppCompatActivity {
     private DatePickerDialog.OnDateSetListener mDateSetLisenerBirthDate;
     private DatePickerDialog.OnDateSetListener mDateSetLisenerAnniversaryDate;
     String username, password;
+    RadioButton rbMale;
 
 
 
@@ -51,6 +52,8 @@ public class AddNewCustomerDetails extends AppCompatActivity {
 
     void setUpUIReferrence()
     {
+
+        rbMale = (RadioButton) findViewById(R.id.rb_Male_AddCustomerDetailsActivity);
         editTextsArray = new EditText[9];
         etName = (EditText) findViewById(R.id.et_Name_AddCustomerDetailsActivity);
         editTextsArray[0] = etName;
@@ -168,9 +171,10 @@ public class AddNewCustomerDetails extends AppCompatActivity {
             {
 
                 Log.i("CHECK DATA",data);
-                if(editText.getId() == R.id.et_BirthDate_AddCustomerDetailsActivity || editText.getId() == R.id.et_AnniversayDate_AddCustomerDetailsActivity)
+                if(editText.getId() == R.id.et_BirthDate_AddCustomerDetailsActivity || editText.getId() == R.id.et_AnniversayDate_AddCustomerDetailsActivity || editText.getId() == R.id.et_Email_AddCustomerDetailsActivity)
                 {
-
+                    customerDeatils.setAnniversaydate("0000-00-00");
+                    customerDeatils.setBirthdate("0000-00-00");
                 }else {
                     editText.setError("Please fill this details");
                     vaildationState = false;
@@ -187,10 +191,11 @@ public class AddNewCustomerDetails extends AppCompatActivity {
             }
             if(editText.getId() ==  R.id.et_Email_AddCustomerDetailsActivity)
             {
-                if(!android.util.Patterns.EMAIL_ADDRESS.matcher(editText.getText().toString().trim()).matches())
-                {
-                    editText.setError("Please enter a valid email id");
-                    vaildationState = false;
+                if(!(editText.getText().toString().trim()).isEmpty()) {
+                    if (!android.util.Patterns.EMAIL_ADDRESS.matcher(editText.getText().toString().trim()).matches()) {
+                        editText.setError("Please enter a valid email id");
+                        vaildationState = false;
+                    }
                 }
 
             }
@@ -209,10 +214,48 @@ public class AddNewCustomerDetails extends AppCompatActivity {
             username = Utility.getPreferences(this, "username");
             password = Utility.getPreferences(this, "password");
             new AddCustomerDetailsAsyncTask(this,username,password).execute(customerDeatils);
-            Utility.toastMessage(this,"Success your data is saved");
+
+            //Utility.toastMessage(this,"Success your data is saved");
         }
     }
 
+
+    public void clearAllValue()
+    {
+
+        etName = (EditText) findViewById(R.id.et_Name_AddCustomerDetailsActivity);
+       etName.setText(null);
+
+        etMobile = (EditText) findViewById(R.id.et_Mobile_AddCustomerDetailsActivity);
+        etMobile.setText(null);
+
+        etEmail =(EditText) findViewById(R.id.et_Email_AddCustomerDetailsActivity);
+        etEmail.setText(null);
+
+        etCity = (EditText) findViewById(R.id.et_City_AddCustomerDetailsActivity);
+        etCity.setText(null);
+
+        etState =(EditText) findViewById(R.id.et_State_AddCustomerDetailsActivity);
+        etState.setText(null);
+        etPincode = (EditText) findViewById(R.id.et_Pincode_AddCustomerDetailsActivity);
+        etPincode.setText(null);
+
+
+        etComments = (EditText) findViewById(R.id.et_Comments_AddCustomerDetailsActivity);
+        etComments.setText(null);
+
+
+        etBirthDate = (EditText) findViewById(R.id.et_BirthDate_AddCustomerDetailsActivity);
+        etBirthDate.setText(null);
+
+
+        etAnniversaryDate =(EditText) findViewById(R.id.et_AnniversayDate_AddCustomerDetailsActivity);
+        etAnniversaryDate.setText(null);
+        rbMale.setChecked(true);
+
+
+
+    }
 
     public void setGender(View view) {
         switch (view.getId())

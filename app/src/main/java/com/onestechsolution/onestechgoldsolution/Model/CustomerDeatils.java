@@ -16,6 +16,10 @@ public class CustomerDeatils {
         gender = "Male";
         anniversarydate = "0000-00-00";
         birthdate = "0000-00-00";
+        comments = "NA";
+        email = "NA";
+        mobilenumber = "0000000000";
+
 
 
     }
