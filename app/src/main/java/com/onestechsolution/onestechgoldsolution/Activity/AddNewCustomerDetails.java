@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 
 import com.bumptech.glide.util.Util;
+import com.onestechsolution.onestechgoldsolution.Asynctask.AddCustomerDetailsAsyncTask;
 import com.onestechsolution.onestechgoldsolution.Model.CustomerDeatils;
 import com.onestechsolution.onestechgoldsolution.R;
 import com.onestechsolution.onestechgoldsolution.Utilities.Utility;
@@ -27,6 +28,7 @@ public class AddNewCustomerDetails extends AppCompatActivity {
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     private DatePickerDialog.OnDateSetListener mDateSetLisenerBirthDate;
     private DatePickerDialog.OnDateSetListener mDateSetLisenerAnniversaryDate;
+    String username, password;
 
 
 
@@ -99,9 +101,10 @@ public class AddNewCustomerDetails extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month ,int day) {
                 month = month + 1;
-                String Date = day +"/"+month+"/"+year;
+                String Date = year +"-"+month+"-"+day;
                 etBirthDate.setError(null);
                 etBirthDate.setText(Date);
+                customerDeatils.setBirthdate(Date);
             }
         };
 
@@ -125,9 +128,10 @@ public class AddNewCustomerDetails extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month ,int day) {
                 month = month + 1;
-                String Date = day +"/"+month+"/"+year;
+                String Date = year +"-"+month+"-"+day;
                 etAnniversaryDate.setError(null);
                 etAnniversaryDate.setText(Date);
+                customerDeatils.setAnniversaydate(Date);
 
             }
         };
@@ -164,8 +168,13 @@ public class AddNewCustomerDetails extends AppCompatActivity {
             {
 
                 Log.i("CHECK DATA",data);
-                editText.setError("Please fill this details");
-                vaildationState = false;
+                if(editText.getId() == R.id.et_BirthDate_AddCustomerDetailsActivity || editText.getId() == R.id.et_AnniversayDate_AddCustomerDetailsActivity)
+                {
+
+                }else {
+                    editText.setError("Please fill this details");
+                    vaildationState = false;
+                }
             }
             if(editText.getId() ==  R.id.et_Mobile_AddCustomerDetailsActivity)
             {
@@ -197,6 +206,9 @@ public class AddNewCustomerDetails extends AppCompatActivity {
         setData();
         if(validateInput())
         {
+            username = Utility.getPreferences(this, "username");
+            password = Utility.getPreferences(this, "password");
+            new AddCustomerDetailsAsyncTask(this,username,password).execute(customerDeatils);
             Utility.toastMessage(this,"Success your data is saved");
         }
     }

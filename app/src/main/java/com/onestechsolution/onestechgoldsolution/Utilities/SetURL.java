@@ -38,6 +38,7 @@ public class SetURL {
     public final String SendLoanListDetailsData;
     public final String SendSaleData;
     public final String SendStockData;
+    public final String SendCustomeDetailsData;
 
     //PROD URL
     private static String prodWebUrl = "http://103.231.8.162/ImageTesting/";
@@ -71,7 +72,7 @@ public class SetURL {
         SendLoanListDetailsData = currentWebURL + "uploadLoanListDetails.php";
         SendSaleData = currentWebURL + "uploadSaleDetails.php";
         SendStockData = currentWebURL + "uploadStockDetails.php";
-
+        SendCustomeDetailsData = currentWebURL + "uploadCustomerDetails.php";
 
     }
 

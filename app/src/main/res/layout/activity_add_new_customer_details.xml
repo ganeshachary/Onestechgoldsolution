@@ -154,7 +154,7 @@
             android:inputType="text"
             android:maxLength="700"
             android:maxLines="5"
-            android:singleLine="false" />
+           />
 
         <Button
             android:layout_width="match_parent"

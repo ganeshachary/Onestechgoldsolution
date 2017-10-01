@@ -1,16 +1,49 @@
 package com.onestechsolution.onestechgoldsolution.Model;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Created by psganesh on 01/10/17.
  */
 
 public class CustomerDeatils {
-    String name, mobilenumber , email , state, city , pincode , comments, gender , birthdate , anniversaydate;
+    String name, mobilenumber , email , state, city , pincode ,address, comments, gender , birthdate , anniversarydate;
 
 
+    public CustomerDeatils()
+    {
+        gender = "Male";
+        anniversarydate = "0000-00-00";
+        birthdate = "0000-00-00";
 
 
+    }
 
+    public String getJSON() throws JSONException {
+       JSONObject jsonObject = new JSONObject();
+       jsonObject.accumulate("name", name);
+       jsonObject.accumulate("mobilenumber", mobilenumber);
+       jsonObject.accumulate("email", email);
+       jsonObject.accumulate("state", state);
+       jsonObject.accumulate("city", city);
+       jsonObject.accumulate("pincode", pincode);
+       jsonObject.accumulate("gender", gender);
+       jsonObject.accumulate("birthdate", birthdate);
+       jsonObject.accumulate("anniversarydate", anniversarydate);
+       jsonObject.accumulate("comments", comments);
+       JSONObject rootObject = new JSONObject();
+       rootObject.accumulate("customer", jsonObject);
+       return rootObject.toString();
+   }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
     public String getName() {
         return name;
     }
@@ -84,10 +117,10 @@ public class CustomerDeatils {
     }
 
     public String getAnniversaydate() {
-        return anniversaydate;
+        return anniversarydate;
     }
 
     public void setAnniversaydate(String anniversaydate) {
-        this.anniversaydate = anniversaydate;
+        this.anniversarydate = anniversaydate;
     }
 }
