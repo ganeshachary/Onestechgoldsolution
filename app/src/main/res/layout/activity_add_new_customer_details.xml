@@ -81,11 +81,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="BirthDate"/>
-            <Button
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/et_BirthDate_AddCustomerDetailsActivity"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="selectDate"
-                />
+                android:inputType="text"
+                android:maxLines="1"
+                android:maxLength="25"
+                android:textAlignment="center"
+                android:hint="select"/>
 
         </LinearLayout>
 
@@ -94,15 +98,23 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+           >
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="AnniversaryDate"/>
-            <Button
-                android:layout_width="wrap_content"
+                android:text="AnniversaryDate"
+               />
+            <EditText
+                android:id="@+id/et_AnniversayDate_AddCustomerDetailsActivity"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="selectDate"
+                android:inputType="text"
+                android:maxLines="1"
+                android:maxLength="25"
+                android:hint="select"
+                android:textAlignment="center"
                 />
 
         </LinearLayout>
