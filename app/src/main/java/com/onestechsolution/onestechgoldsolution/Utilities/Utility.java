@@ -12,6 +12,7 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -125,4 +126,12 @@ public class Utility {
     }
 
 
+    public static void toastMessage(Context context , String message)
+    {
+        Toast.makeText(context ,message,Toast.LENGTH_SHORT).show();
+    }
 }
+
+
+
+
