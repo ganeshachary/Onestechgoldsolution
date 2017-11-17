@@ -41,7 +41,7 @@ public class SetURL {
     public final String SendCustomeDetailsData;
 
     //PROD URL
-    private static String prodWebUrl = "http://103.231.8.162/ImageTesting/";
+    private static String prodWebUrl = "http://www.cleartask.in/gbv/imagetesting/";
 
     //TEST URL
     private static String testWebUrl= "http://devwellupsolutions.com/GBVJewellers/ImageTesting/";
