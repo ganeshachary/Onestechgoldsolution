@@ -1,25 +1,22 @@
 package com.onestechsolution.onestechgoldsolution.Activity;
 
 import android.app.DatePickerDialog;
-import java.util.Calendar;
-
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
-import com.bumptech.glide.util.Util;
 import com.onestechsolution.onestechgoldsolution.Asynctask.AddCustomerDetailsAsyncTask;
 import com.onestechsolution.onestechgoldsolution.Model.CustomerDeatils;
 import com.onestechsolution.onestechgoldsolution.R;
 import com.onestechsolution.onestechgoldsolution.Utilities.Utility;
+
+import java.util.Calendar;
 
 public class AddNewCustomerDetails extends AppCompatActivity {
 
@@ -46,6 +43,8 @@ public class AddNewCustomerDetails extends AppCompatActivity {
         customerDeatils.setGender("Male");
         customerDeatils.setAnniversaydate("NA");
         customerDeatils.setBirthdate("NA");
+
+
 
 
     }
