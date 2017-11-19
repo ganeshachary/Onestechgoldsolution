@@ -23,15 +23,15 @@
         android:onClick="openLoanActivity"
         android:text="Loan"/>
 
-    <Button
-        android:id="@+id/tv_AddCustomer_HomeActivity"
-        style="@style/ButtonWithHeight0dp"
-        android:background="@drawable/yellow_button"
-        android:drawableLeft="@drawable/ic_customers"
-        android:text="Customer Details"
-        android:onClick="openAddCustomerActivity"
+    <!--<Button-->
+        <!--android:id="@+id/tv_AddCustomer_HomeActivity"-->
+        <!--style="@style/ButtonWithHeight0dp"-->
+        <!--android:background="@drawable/yellow_button"-->
+        <!--android:drawableLeft="@drawable/ic_customers"-->
+        <!--android:text="Customer Details"-->
+        <!--android:onClick="openAddCustomerActivity"-->
 
-        />
+        <!--/>-->
 
 
     <!-- <Button
