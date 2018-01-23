@@ -25,7 +25,7 @@ public class StockEntryReportActivity extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.pb_ProgressBar_StockEntryReport);
 
         webView.setWebViewClient(new AppWebViewClients(progressBar));
-        webView.loadUrl("http://www.cleartask.in/gbv/displayStockDetails.php");
+        webView.loadUrl("http://vidvels.com/gbvtest/displayStockDetails.php");
         webView.getSettings().setSupportZoom(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         webView.getSettings().setBuiltInZoomControls(true);
